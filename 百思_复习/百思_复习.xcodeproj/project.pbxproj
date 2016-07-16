@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A2C01301D39EC1C00501045 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C012F1D39EC1C00501045 /* main.m */; };
-		5A2C01331D39EC1C00501045 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01321D39EC1C00501045 /* AppDelegate.m */; };
 		5A2C013B1D39EC1C00501045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2C013A1D39EC1C00501045 /* Assets.xcassets */; };
 		5A2C013E1D39EC1C00501045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2C013C1D39EC1C00501045 /* LaunchScreen.storyboard */; };
 		5A2C01491D39EC1C00501045 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01481D39EC1C00501045 /* _____Tests.m */; };
 		5A2C01541D39EC1C00501045 /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01531D39EC1C00501045 /* _____UITests.m */; };
-		5A2C01631D39EE7100501045 /* YFTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01621D39EE7100501045 /* YFTabBarController.m */; };
-		5A2C01661D39EE9600501045 /* YFNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01651D39EE9600501045 /* YFNavController.m */; };
-		5A2C016A1D39F65300501045 /* YFTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01691D39F65300501045 /* YFTabBar.m */; };
-		5A2C016D1D39FFB500501045 /* UIView+YFExension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C016C1D39FFB500501045 /* UIView+YFExension.m */; };
+		5A2C01961D3A131B00501045 /* YFFriendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01781D3A131B00501045 /* YFFriendController.m */; };
+		5A2C01971D3A131B00501045 /* YFFriendController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2C01791D3A131B00501045 /* YFFriendController.xib */; };
+		5A2C01981D3A131B00501045 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C017E1D3A131B00501045 /* AppDelegate.m */; };
+		5A2C01991D3A131B00501045 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C017F1D3A131B00501045 /* main.m */; };
+		5A2C019A1D3A131B00501045 /* YFNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01821D3A131B00501045 /* YFNavController.m */; };
+		5A2C019B1D3A131B00501045 /* YFTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01841D3A131B00501045 /* YFTabBar.m */; };
+		5A2C019C1D3A131B00501045 /* YFTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01861D3A131B00501045 /* YFTabBarController.m */; };
+		5A2C019D1D3A131B00501045 /* UIView+YFExension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01891D3A131B00501045 /* UIView+YFExension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +40,6 @@
 
 /* Begin PBXFileReference section */
 		5A2C012B1D39EC1C00501045 /* 百思_复习.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思_复习.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A2C012F1D39EC1C00501045 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5A2C01311D39EC1C00501045 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5A2C01321D39EC1C00501045 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5A2C013A1D39EC1C00501045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A2C013D1D39EC1C00501045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A2C013F1D39EC1C00501045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,15 +49,21 @@
 		5A2C014F1D39EC1C00501045 /* 百思_复习UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思_复习UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2C01531D39EC1C00501045 /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
 		5A2C01551D39EC1C00501045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A2C01611D39EE7100501045 /* YFTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFTabBarController.h; sourceTree = "<group>"; };
-		5A2C01621D39EE7100501045 /* YFTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFTabBarController.m; sourceTree = "<group>"; };
-		5A2C01641D39EE9600501045 /* YFNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFNavController.h; sourceTree = "<group>"; };
-		5A2C01651D39EE9600501045 /* YFNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFNavController.m; sourceTree = "<group>"; };
-		5A2C01671D39F23600501045 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		5A2C01681D39F65300501045 /* YFTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFTabBar.h; sourceTree = "<group>"; };
-		5A2C01691D39F65300501045 /* YFTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFTabBar.m; sourceTree = "<group>"; };
-		5A2C016B1D39FFB500501045 /* UIView+YFExension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YFExension.h"; sourceTree = "<group>"; };
-		5A2C016C1D39FFB500501045 /* UIView+YFExension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YFExension.m"; sourceTree = "<group>"; };
+		5A2C01771D3A131B00501045 /* YFFriendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFFriendController.h; sourceTree = "<group>"; };
+		5A2C01781D3A131B00501045 /* YFFriendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFFriendController.m; sourceTree = "<group>"; };
+		5A2C01791D3A131B00501045 /* YFFriendController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFFriendController.xib; sourceTree = "<group>"; };
+		5A2C017D1D3A131B00501045 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5A2C017E1D3A131B00501045 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5A2C017F1D3A131B00501045 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A2C01801D3A131B00501045 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5A2C01811D3A131B00501045 /* YFNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFNavController.h; sourceTree = "<group>"; };
+		5A2C01821D3A131B00501045 /* YFNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFNavController.m; sourceTree = "<group>"; };
+		5A2C01831D3A131B00501045 /* YFTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFTabBar.h; sourceTree = "<group>"; };
+		5A2C01841D3A131B00501045 /* YFTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFTabBar.m; sourceTree = "<group>"; };
+		5A2C01851D3A131B00501045 /* YFTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFTabBarController.h; sourceTree = "<group>"; };
+		5A2C01861D3A131B00501045 /* YFTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFTabBarController.m; sourceTree = "<group>"; };
+		5A2C01881D3A131B00501045 /* UIView+YFExension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YFExension.h"; sourceTree = "<group>"; };
+		5A2C01891D3A131B00501045 /* UIView+YFExension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YFExension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,21 +114,11 @@
 		5A2C012D1D39EC1C00501045 /* 百思_复习 */ = {
 			isa = PBXGroup;
 			children = (
-				5A2C01311D39EC1C00501045 /* AppDelegate.h */,
-				5A2C01321D39EC1C00501045 /* AppDelegate.m */,
+				5A2C01741D3A131B00501045 /* classes */,
 				5A2C013A1D39EC1C00501045 /* Assets.xcassets */,
 				5A2C013C1D39EC1C00501045 /* LaunchScreen.storyboard */,
 				5A2C013F1D39EC1C00501045 /* Info.plist */,
 				5A2C012E1D39EC1C00501045 /* Supporting Files */,
-				5A2C01611D39EE7100501045 /* YFTabBarController.h */,
-				5A2C01621D39EE7100501045 /* YFTabBarController.m */,
-				5A2C01641D39EE9600501045 /* YFNavController.h */,
-				5A2C01651D39EE9600501045 /* YFNavController.m */,
-				5A2C01671D39F23600501045 /* PrefixHeader.pch */,
-				5A2C01681D39F65300501045 /* YFTabBar.h */,
-				5A2C01691D39F65300501045 /* YFTabBar.m */,
-				5A2C016B1D39FFB500501045 /* UIView+YFExension.h */,
-				5A2C016C1D39FFB500501045 /* UIView+YFExension.m */,
 			);
 			path = "百思_复习";
 			sourceTree = "<group>";
@@ -131,7 +126,6 @@
 		5A2C012E1D39EC1C00501045 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5A2C012F1D39EC1C00501045 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -152,6 +146,172 @@
 				5A2C01551D39EC1C00501045 /* Info.plist */,
 			);
 			path = "百思_复习UITests";
+			sourceTree = "<group>";
+		};
+		5A2C01741D3A131B00501045 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				5A2C01751D3A131B00501045 /* 关注-friend */,
+				5A2C017C1D3A131B00501045 /* 其他-other */,
+				5A2C018A1D3A131B00501045 /* 我-Me */,
+				5A2C018E1D3A131B00501045 /* 新帖-New */,
+				5A2C01921D3A131B00501045 /* 精华-Essence */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		5A2C01751D3A131B00501045 /* 关注-friend */ = {
+			isa = PBXGroup;
+			children = (
+				5A2C01761D3A131B00501045 /* controller */,
+				5A2C017A1D3A131B00501045 /* mode */,
+				5A2C017B1D3A131B00501045 /* view */,
+			);
+			path = "关注-friend";
+			sourceTree = "<group>";
+		};
+		5A2C01761D3A131B00501045 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				5A2C01771D3A131B00501045 /* YFFriendController.h */,
+				5A2C01781D3A131B00501045 /* YFFriendController.m */,
+				5A2C01791D3A131B00501045 /* YFFriendController.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		5A2C017A1D3A131B00501045 /* mode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mode;
+			sourceTree = "<group>";
+		};
+		5A2C017B1D3A131B00501045 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5A2C017C1D3A131B00501045 /* 其他-other */ = {
+			isa = PBXGroup;
+			children = (
+				5A2C017D1D3A131B00501045 /* AppDelegate.h */,
+				5A2C017E1D3A131B00501045 /* AppDelegate.m */,
+				5A2C017F1D3A131B00501045 /* main.m */,
+				5A2C01801D3A131B00501045 /* PrefixHeader.pch */,
+				5A2C01811D3A131B00501045 /* YFNavController.h */,
+				5A2C01821D3A131B00501045 /* YFNavController.m */,
+				5A2C01831D3A131B00501045 /* YFTabBar.h */,
+				5A2C01841D3A131B00501045 /* YFTabBar.m */,
+				5A2C01851D3A131B00501045 /* YFTabBarController.h */,
+				5A2C01861D3A131B00501045 /* YFTabBarController.m */,
+				5A2C01871D3A131B00501045 /* 分类 */,
+			);
+			path = "其他-other";
+			sourceTree = "<group>";
+		};
+		5A2C01871D3A131B00501045 /* 分类 */ = {
+			isa = PBXGroup;
+			children = (
+				5A2C01881D3A131B00501045 /* UIView+YFExension.h */,
+				5A2C01891D3A131B00501045 /* UIView+YFExension.m */,
+			);
+			path = "分类";
+			sourceTree = "<group>";
+		};
+		5A2C018A1D3A131B00501045 /* 我-Me */ = {
+			isa = PBXGroup;
+			children = (
+				5A2C018B1D3A131B00501045 /* controller */,
+				5A2C018C1D3A131B00501045 /* mode */,
+				5A2C018D1D3A131B00501045 /* view */,
+			);
+			path = "我-Me";
+			sourceTree = "<group>";
+		};
+		5A2C018B1D3A131B00501045 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		5A2C018C1D3A131B00501045 /* mode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mode;
+			sourceTree = "<group>";
+		};
+		5A2C018D1D3A131B00501045 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5A2C018E1D3A131B00501045 /* 新帖-New */ = {
+			isa = PBXGroup;
+			children = (
+				5A2C018F1D3A131B00501045 /* controller */,
+				5A2C01901D3A131B00501045 /* mode */,
+				5A2C01911D3A131B00501045 /* view */,
+			);
+			path = "新帖-New";
+			sourceTree = "<group>";
+		};
+		5A2C018F1D3A131B00501045 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		5A2C01901D3A131B00501045 /* mode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mode;
+			sourceTree = "<group>";
+		};
+		5A2C01911D3A131B00501045 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5A2C01921D3A131B00501045 /* 精华-Essence */ = {
+			isa = PBXGroup;
+			children = (
+				5A2C01931D3A131B00501045 /* controller */,
+				5A2C01941D3A131B00501045 /* mode */,
+				5A2C01951D3A131B00501045 /* view */,
+			);
+			path = "精华-Essence";
+			sourceTree = "<group>";
+		};
+		5A2C01931D3A131B00501045 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		5A2C01941D3A131B00501045 /* mode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mode;
+			sourceTree = "<group>";
+		};
+		5A2C01951D3A131B00501045 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +420,7 @@
 			files = (
 				5A2C013E1D39EC1C00501045 /* LaunchScreen.storyboard in Resources */,
 				5A2C013B1D39EC1C00501045 /* Assets.xcassets in Resources */,
+				5A2C01971D3A131B00501045 /* YFFriendController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,12 +445,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A2C016A1D39F65300501045 /* YFTabBar.m in Sources */,
-				5A2C01661D39EE9600501045 /* YFNavController.m in Sources */,
-				5A2C016D1D39FFB500501045 /* UIView+YFExension.m in Sources */,
-				5A2C01331D39EC1C00501045 /* AppDelegate.m in Sources */,
-				5A2C01301D39EC1C00501045 /* main.m in Sources */,
-				5A2C01631D39EE7100501045 /* YFTabBarController.m in Sources */,
+				5A2C019A1D3A131B00501045 /* YFNavController.m in Sources */,
+				5A2C01961D3A131B00501045 /* YFFriendController.m in Sources */,
+				5A2C019D1D3A131B00501045 /* UIView+YFExension.m in Sources */,
+				5A2C019B1D3A131B00501045 /* YFTabBar.m in Sources */,
+				5A2C01991D3A131B00501045 /* main.m in Sources */,
+				5A2C01981D3A131B00501045 /* AppDelegate.m in Sources */,
+				5A2C019C1D3A131B00501045 /* YFTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +586,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
-				GCC_PREFIX_HEADER = "百思_复习/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "百思_复习/classes/其他-other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思_复习/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baidu.-----";
@@ -438,7 +600,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
-				GCC_PREFIX_HEADER = "百思_复习/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "百思_复习/classes/其他-other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思_复习/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.baidu.-----";

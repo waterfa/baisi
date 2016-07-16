@@ -23,6 +23,9 @@
 -(instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
+        
+        //设置背景图片
+//        self.backgroundImage = [UIImage imageNamed:@"tabbar-light"];
        
         UIButton *publishBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [publishBtn setImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];

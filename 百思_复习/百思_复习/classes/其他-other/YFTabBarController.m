@@ -9,6 +9,7 @@
 #import "YFTabBarController.h"
 #import "YFNavController.h"
 #import "YFTabBar.h"
+#import "YFFriendController.h"
 
 @implementation YFTabBarController
 
@@ -24,7 +25,7 @@
     
     [self addNavWithVC:[[UIViewController alloc]init] title:@"新帖" image:@"tabBar_new_icon" selectImage:@"tabBar_new_click_icon"];
     
-    [self addNavWithVC:[[UIViewController alloc]init] title:@"关注" image:@"tabBar_friendTrends_icon" selectImage:@"tabBar_friendTrends_click_icon"];
+    [self addNavWithVC:[[YFFriendController alloc]init] title:@"关注" image:@"tabBar_friendTrends_icon" selectImage:@"tabBar_friendTrends_click_icon"];
     
     [self addNavWithVC:[[UIViewController alloc]init] title:@"我" image:@"tabBar_me_icon" selectImage:@"tabBar_me_click_icon"];
  
@@ -35,9 +36,9 @@
 
 -(void)addNavWithVC:(UIViewController *)vc title:(NSString *)title image:(NSString *)image selectImage:(NSString *)selectImage;
 {
-    vc.view.backgroundColor = YFRandomColor;
+    vc.view.backgroundColor = YFGobalColor;
     
-    vc.title = title;
+    vc.tabBarItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:image];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectImage];
     

@@ -13,6 +13,7 @@
 
 #define YFColor(a,b,c) [UIColor colorWithRed:(a)/255.0 green:(b)/255.0 blue:(c)/255.0 alpha:1]
 #define YFRandomColor YFColor(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
+#define YFGobalColor YFColor(234,234,234)
 
 #define YFLogFunc  NSLog(@"%s",__func__)
 #define YFScreenH [UIScreen mainScreen].bounds.size.height
