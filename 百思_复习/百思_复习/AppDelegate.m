@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "YFTabBarController.h"
+#import "YFNavController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc]init];
+    
+    
+    YFTabBarController *tabVc = [[YFTabBarController alloc]init];
+    
+    
+    self.window.rootViewController = tabVc;
+    
+    [self.window makeKeyAndVisible];
+    
+    
+    
+    
     return YES;
 }
 

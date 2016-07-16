@@ -1,0 +1,22 @@
+//
+//  PrefixHeader.pch
+//  百思_复习
+//
+//  Created by 钟永发 on 16/7/16.
+//  Copyright © 2016年 facker. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+YFExension.h"
+
+#define YFColor(a,b,c) [UIColor colorWithRed:(a)/255.0 green:(b)/255.0 blue:(c)/255.0 alpha:1]
+#define YFRandomColor YFColor(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
+
+#define YFLogFunc  NSLog(@"%s",__func__)
+#define YFScreenH [UIScreen mainScreen].bounds.size.height
+#define YFScreenW [UIScreen mainScreen].bounds.size.width
+
+
+#endif /* PrefixHeader_pch */
