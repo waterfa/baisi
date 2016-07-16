@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, "9.0"
+
+pod "AFNetworking"
+pod "MJRefresh"
+pod "MJExtension"
+pod "SDWebImage"
+
+
+target "百思_复习"
+

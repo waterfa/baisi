@@ -19,6 +19,13 @@
 		5A2C019B1D3A131B00501045 /* YFTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01841D3A131B00501045 /* YFTabBar.m */; };
 		5A2C019C1D3A131B00501045 /* YFTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01861D3A131B00501045 /* YFTabBarController.m */; };
 		5A2C019D1D3A131B00501045 /* UIView+YFExension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01891D3A131B00501045 /* UIView+YFExension.m */; };
+		5A2C01A11D3A15C300501045 /* YFRecommendFriendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C019F1D3A15C300501045 /* YFRecommendFriendController.m */; };
+		5A2C01A21D3A15C300501045 /* YFRecommendFriendController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2C01A01D3A15C300501045 /* YFRecommendFriendController.xib */; };
+		5A2C01A51D3A1E8E00501045 /* YFCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01A41D3A1E8E00501045 /* YFCategory.m */; };
+		5A2C01A81D3A223E00501045 /* YFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01A71D3A223E00501045 /* YFUser.m */; };
+		5A2C01AC1D3A22D300501045 /* YFUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01AA1D3A22D300501045 /* YFUserCell.m */; };
+		5A2C01AD1D3A22D300501045 /* YFUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2C01AB1D3A22D300501045 /* YFUserCell.xib */; };
+		6A00EEDA3B98759622D46FA7 /* libPods-百思_复习.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09194016C6EEDB978B32723A /* libPods-百思_复习.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09194016C6EEDB978B32723A /* libPods-百思_复习.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思_复习.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2C012B1D39EC1C00501045 /* 百思_复习.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思_复习.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2C013A1D39EC1C00501045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A2C013D1D39EC1C00501045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +72,18 @@
 		5A2C01861D3A131B00501045 /* YFTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFTabBarController.m; sourceTree = "<group>"; };
 		5A2C01881D3A131B00501045 /* UIView+YFExension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YFExension.h"; sourceTree = "<group>"; };
 		5A2C01891D3A131B00501045 /* UIView+YFExension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YFExension.m"; sourceTree = "<group>"; };
+		5A2C019E1D3A15C300501045 /* YFRecommendFriendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRecommendFriendController.h; sourceTree = "<group>"; };
+		5A2C019F1D3A15C300501045 /* YFRecommendFriendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRecommendFriendController.m; sourceTree = "<group>"; };
+		5A2C01A01D3A15C300501045 /* YFRecommendFriendController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFRecommendFriendController.xib; sourceTree = "<group>"; };
+		5A2C01A31D3A1E8E00501045 /* YFCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFCategory.h; sourceTree = "<group>"; };
+		5A2C01A41D3A1E8E00501045 /* YFCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFCategory.m; sourceTree = "<group>"; };
+		5A2C01A61D3A223E00501045 /* YFUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFUser.h; sourceTree = "<group>"; };
+		5A2C01A71D3A223E00501045 /* YFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFUser.m; sourceTree = "<group>"; };
+		5A2C01A91D3A22D300501045 /* YFUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFUserCell.h; sourceTree = "<group>"; };
+		5A2C01AA1D3A22D300501045 /* YFUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFUserCell.m; sourceTree = "<group>"; };
+		5A2C01AB1D3A22D300501045 /* YFUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFUserCell.xib; sourceTree = "<group>"; };
+		6AE192C1AEFEAF16C1D2FDEE /* Pods-百思_复习.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思_复习.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思_复习/Pods-百思_复习.debug.xcconfig"; sourceTree = "<group>"; };
+		C9C7D495C0CCC62D6232F688 /* Pods-百思_复习.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思_复习.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思_复习/Pods-百思_复习.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A00EEDA3B98759622D46FA7 /* libPods-百思_复习.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +112,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FD0C30F37BD4CD50F7DA146 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6AE192C1AEFEAF16C1D2FDEE /* Pods-百思_复习.debug.xcconfig */,
+				C9C7D495C0CCC62D6232F688 /* Pods-百思_复习.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5A2C01221D39EC1C00501045 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +128,8 @@
 				5A2C01471D39EC1C00501045 /* 百思_复习Tests */,
 				5A2C01521D39EC1C00501045 /* 百思_复习UITests */,
 				5A2C012C1D39EC1C00501045 /* Products */,
+				0FD0C30F37BD4CD50F7DA146 /* Pods */,
+				94764A5EC77B83BC700641D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,6 +208,9 @@
 				5A2C01771D3A131B00501045 /* YFFriendController.h */,
 				5A2C01781D3A131B00501045 /* YFFriendController.m */,
 				5A2C01791D3A131B00501045 /* YFFriendController.xib */,
+				5A2C019E1D3A15C300501045 /* YFRecommendFriendController.h */,
+				5A2C019F1D3A15C300501045 /* YFRecommendFriendController.m */,
+				5A2C01A01D3A15C300501045 /* YFRecommendFriendController.xib */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -183,6 +218,10 @@
 		5A2C017A1D3A131B00501045 /* mode */ = {
 			isa = PBXGroup;
 			children = (
+				5A2C01A31D3A1E8E00501045 /* YFCategory.h */,
+				5A2C01A41D3A1E8E00501045 /* YFCategory.m */,
+				5A2C01A61D3A223E00501045 /* YFUser.h */,
+				5A2C01A71D3A223E00501045 /* YFUser.m */,
 			);
 			path = mode;
 			sourceTree = "<group>";
@@ -190,6 +229,9 @@
 		5A2C017B1D3A131B00501045 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				5A2C01A91D3A22D300501045 /* YFUserCell.h */,
+				5A2C01AA1D3A22D300501045 /* YFUserCell.m */,
+				5A2C01AB1D3A22D300501045 /* YFUserCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -314,6 +356,14 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		94764A5EC77B83BC700641D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09194016C6EEDB978B32723A /* libPods-百思_复习.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -321,9 +371,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A2C01581D39EC1C00501045 /* Build configuration list for PBXNativeTarget "百思_复习" */;
 			buildPhases = (
+				44CEAAB7E2BF8B442427D90B /* [CP] Check Pods Manifest.lock */,
 				5A2C01271D39EC1C00501045 /* Sources */,
 				5A2C01281D39EC1C00501045 /* Frameworks */,
 				5A2C01291D39EC1C00501045 /* Resources */,
+				FFE4281FD87414905BB554CF /* [CP] Embed Pods Frameworks */,
+				4A2F02687D2DAF3FD2F6B3FC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -419,6 +472,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A2C013E1D39EC1C00501045 /* LaunchScreen.storyboard in Resources */,
+				5A2C01A21D3A15C300501045 /* YFRecommendFriendController.xib in Resources */,
+				5A2C01AD1D3A22D300501045 /* YFUserCell.xib in Resources */,
 				5A2C013B1D39EC1C00501045 /* Assets.xcassets in Resources */,
 				5A2C01971D3A131B00501045 /* YFFriendController.xib in Resources */,
 			);
@@ -440,18 +495,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		44CEAAB7E2BF8B442427D90B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4A2F02687D2DAF3FD2F6B3FC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思_复习/Pods-百思_复习-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFE4281FD87414905BB554CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思_复习/Pods-百思_复习-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5A2C01271D39EC1C00501045 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5A2C019A1D3A131B00501045 /* YFNavController.m in Sources */,
+				5A2C01A51D3A1E8E00501045 /* YFCategory.m in Sources */,
+				5A2C01AC1D3A22D300501045 /* YFUserCell.m in Sources */,
 				5A2C01961D3A131B00501045 /* YFFriendController.m in Sources */,
 				5A2C019D1D3A131B00501045 /* UIView+YFExension.m in Sources */,
 				5A2C019B1D3A131B00501045 /* YFTabBar.m in Sources */,
 				5A2C01991D3A131B00501045 /* main.m in Sources */,
+				5A2C01A11D3A15C300501045 /* YFRecommendFriendController.m in Sources */,
 				5A2C01981D3A131B00501045 /* AppDelegate.m in Sources */,
 				5A2C019C1D3A131B00501045 /* YFTabBarController.m in Sources */,
+				5A2C01A81D3A223E00501045 /* YFUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +689,7 @@
 		};
 		5A2C01591D39EC1C00501045 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AE192C1AEFEAF16C1D2FDEE /* Pods-百思_复习.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -596,6 +704,7 @@
 		};
 		5A2C015A1D39EC1C00501045 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9C7D495C0CCC62D6232F688 /* Pods-百思_复习.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";

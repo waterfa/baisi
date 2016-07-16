@@ -7,6 +7,7 @@
 //
 
 #import "YFFriendController.h"
+#import "YFRecommendFriendController.h"
 
 @interface YFFriendController ()
 
@@ -19,7 +20,7 @@
    
     self.navigationItem.title = @"我的关注";
     
-    
+
     //左边按钮
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setImage:[UIImage imageNamed:@"friendsRecommentIcon"] forState:UIControlStateNormal];
@@ -32,7 +33,8 @@
 
 -(void)leftBtnClick
 {
-    NSLog(@"点击了左边的添加关注按钮");
+    YFRecommendFriendController *vc = [[YFRecommendFriendController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
