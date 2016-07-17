@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class YFUser;
 @interface YFUserCell : UITableViewCell
 
+/** 模型 */
+@property(nonatomic,strong)YFUser  *user;
+
++(instancetype)cellWithTableView:(UITableView *)tableView;
 @end

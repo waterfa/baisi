@@ -15,4 +15,6 @@
 @property(nonatomic,copy)NSString *header;
 /** 被关注数量 */
 @property(nonatomic,copy)NSString *fans_count;
+/** 下一页 */
+@property(nonatomic,assign)int total_page;
 @end

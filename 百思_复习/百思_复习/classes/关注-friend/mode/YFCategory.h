@@ -13,5 +13,7 @@
 @property(nonatomic,copy)NSString *name;
 /** 用户数 */
 @property(nonatomic,copy)NSString *count;
+/** id */
+@property(nonatomic,assign)int id;
 
 @end

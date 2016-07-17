@@ -25,6 +25,9 @@
 		5A2C01A81D3A223E00501045 /* YFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01A71D3A223E00501045 /* YFUser.m */; };
 		5A2C01AC1D3A22D300501045 /* YFUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01AA1D3A22D300501045 /* YFUserCell.m */; };
 		5A2C01AD1D3A22D300501045 /* YFUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2C01AB1D3A22D300501045 /* YFUserCell.xib */; };
+		5A444E221D3BA6F000787F95 /* YFCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A444E201D3BA6F000787F95 /* YFCategoryCell.m */; };
+		5A444E231D3BA6F000787F95 /* YFCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A444E211D3BA6F000787F95 /* YFCategoryCell.xib */; };
+		5A444E251D3BECD800787F95 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A444E241D3BECD800787F95 /* Foundation+Log.m */; };
 		6A00EEDA3B98759622D46FA7 /* libPods-百思_复习.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09194016C6EEDB978B32723A /* libPods-百思_复习.a */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +85,10 @@
 		5A2C01A91D3A22D300501045 /* YFUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFUserCell.h; sourceTree = "<group>"; };
 		5A2C01AA1D3A22D300501045 /* YFUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFUserCell.m; sourceTree = "<group>"; };
 		5A2C01AB1D3A22D300501045 /* YFUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFUserCell.xib; sourceTree = "<group>"; };
+		5A444E1F1D3BA6F000787F95 /* YFCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFCategoryCell.h; sourceTree = "<group>"; };
+		5A444E201D3BA6F000787F95 /* YFCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFCategoryCell.m; sourceTree = "<group>"; };
+		5A444E211D3BA6F000787F95 /* YFCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFCategoryCell.xib; sourceTree = "<group>"; };
+		5A444E241D3BECD800787F95 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		6AE192C1AEFEAF16C1D2FDEE /* Pods-百思_复习.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思_复习.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思_复习/Pods-百思_复习.debug.xcconfig"; sourceTree = "<group>"; };
 		C9C7D495C0CCC62D6232F688 /* Pods-百思_复习.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思_复习.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思_复习/Pods-百思_复习.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -232,6 +239,9 @@
 				5A2C01A91D3A22D300501045 /* YFUserCell.h */,
 				5A2C01AA1D3A22D300501045 /* YFUserCell.m */,
 				5A2C01AB1D3A22D300501045 /* YFUserCell.xib */,
+				5A444E1F1D3BA6F000787F95 /* YFCategoryCell.h */,
+				5A444E201D3BA6F000787F95 /* YFCategoryCell.m */,
+				5A444E211D3BA6F000787F95 /* YFCategoryCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -239,6 +249,7 @@
 		5A2C017C1D3A131B00501045 /* 其他-other */ = {
 			isa = PBXGroup;
 			children = (
+				5A444E241D3BECD800787F95 /* Foundation+Log.m */,
 				5A2C017D1D3A131B00501045 /* AppDelegate.h */,
 				5A2C017E1D3A131B00501045 /* AppDelegate.m */,
 				5A2C017F1D3A131B00501045 /* main.m */,
@@ -475,6 +486,7 @@
 				5A2C01A21D3A15C300501045 /* YFRecommendFriendController.xib in Resources */,
 				5A2C01AD1D3A22D300501045 /* YFUserCell.xib in Resources */,
 				5A2C013B1D39EC1C00501045 /* Assets.xcassets in Resources */,
+				5A444E231D3BA6F000787F95 /* YFCategoryCell.xib in Resources */,
 				5A2C01971D3A131B00501045 /* YFFriendController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A444E221D3BA6F000787F95 /* YFCategoryCell.m in Sources */,
 				5A2C019A1D3A131B00501045 /* YFNavController.m in Sources */,
 				5A2C01A51D3A1E8E00501045 /* YFCategory.m in Sources */,
 				5A2C01AC1D3A22D300501045 /* YFUserCell.m in Sources */,
@@ -557,6 +570,7 @@
 				5A2C01991D3A131B00501045 /* main.m in Sources */,
 				5A2C01A11D3A15C300501045 /* YFRecommendFriendController.m in Sources */,
 				5A2C01981D3A131B00501045 /* AppDelegate.m in Sources */,
+				5A444E251D3BECD800787F95 /* Foundation+Log.m in Sources */,
 				5A2C019C1D3A131B00501045 /* YFTabBarController.m in Sources */,
 				5A2C01A81D3A223E00501045 /* YFUser.m in Sources */,
 			);
