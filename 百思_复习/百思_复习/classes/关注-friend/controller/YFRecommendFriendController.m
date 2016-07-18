@@ -15,6 +15,7 @@
 #import "YFUser.h"
 #import "YFUserCell.h"
 
+#define YFSelectCategory self.categories[[self.categoryTableView indexPathForSelectedRow].row]
 @interface YFRecommendFriendController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
 @property (weak, nonatomic) IBOutlet UITableView *userTableView;
@@ -27,7 +28,8 @@
 
 /** nextPage */
 @property(nonatomic,assign)int page;
-
+/** 请求的参数 */
+@property(nonatomic,strong)NSDictionary *params;
 @end
 
 @implementation YFRecommendFriendController
@@ -58,7 +60,7 @@ static NSString *const XMGUserID = @"user";
 {
     self.userTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewUsers)];
     
-    self.userTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
+    self.userTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
     
     
 }
@@ -72,60 +74,75 @@ static NSString *const XMGUserID = @"user";
     params[@"category_id"] = @(rc.id) ;
     params[@"page"] = @(self.page+1);
     
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *responseObject) {
-        
-        NSLog(@"%@",responseObject);
-        
-        self.page++;
-        NSArray *users = [YFUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        NSInteger total = [responseObject[@"total"] integerValue];
-        
-        [self.users addObjectsFromArray:users];
-        
-        [self.userTableView reloadData];
-        
-        if(self.users.count == total){
-            [self.userTableView.mj_footer endRefreshingWithNoMoreData];
-        }else{
-            [self.userTableView.mj_footer endRefreshing];
-        }
-        
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"请求失败");
-    }];
+    self.params = params;
+    
+        [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *responseObject) {
+            
+            if(params != self.params) {
+                return ;
+            }
+            self.page++;
+            NSArray *users = [YFUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+            rc.total = [responseObject[@"total"] integerValue];
+            [rc.users addObjectsFromArray:users];
+            
+            [self.userTableView reloadData];
+            
+            [self checkStates];
+            
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"请求失败");
+        }];
+   
     
     
 }
 -(void)loadNewUsers
 {
-    YFCategory *rc = self.categories[[self.categoryTableView indexPathForSelectedRow].row ];
+    YFCategory *rc = YFSelectCategory;
   
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"subscribe";
     params[@"category_id"] = @(rc.id) ;
     
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id responseObject) {
-
-        self.users = [YFUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        
-        self.page = 1;
-        
-        [self.userTableView reloadData];
-        NSInteger total = [responseObject[@"total"] integerValue];
-        if(self.users.count == total){
-            [self.userTableView.mj_footer endRefreshingWithNoMoreData];
-        }else{
-            [self.userTableView.mj_footer endRefreshing];
-        }
-        
-        [self.userTableView.mj_header endRefreshing];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"请求失败");
-    }];
+    self.params = params;
+    
+   
+        [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id responseObject) {
+            
+            if(params != self.params) return ;
+            
+            [rc.users removeAllObjects];
+            NSArray *users = [YFUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+            [rc.users addObjectsFromArray:users] ;
+            
+            self.page = 1;
+            
+            [self.userTableView reloadData];
+            rc.total = [responseObject[@"total"] integerValue];
+            
+            [self checkStates];
+            
+            [self.userTableView.mj_header endRefreshing];
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"请求失败");
+        }];
+   
     
     
+}
+-(void)checkStates
+{
+    YFCategory *category = YFSelectCategory;
+    self.userTableView.mj_footer.hidden = category.users.count==0;
+    if(category.users.count>= category.total){
+        [self.userTableView.mj_footer endRefreshingWithNoMoreData];
+    }else
+    {
+        [self.userTableView.mj_footer endRefreshing];
+    }
 }
 //发送请求
 -(void)setupRequest
@@ -135,31 +152,40 @@ static NSString *const XMGUserID = @"user";
     params[@"a"] =  @"category";
     params[@"c"] = @"subscribe";
     
+         [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            
+            
+            
+            self.categories = [YFCategory mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+            
+            [self.categoryTableView reloadData];
+            
+            [self.categoryTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+            [self.userTableView.mj_header beginRefreshing];
+            
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"骑牛失败");
+        }];
     
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        self.categories = [YFCategory mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        
-        [self.categoryTableView reloadData];
-        
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"骑牛失败");
-    }];
     
     
     
 }
 
-
+-(void)dealloc
+{
+    [[AFHTTPSessionManager manager].operationQueue cancelAllOperations];
+}
 
 #pragma mark - <UITableViewDataSource>
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if(tableView == self.userTableView){
+        YFCategory *category = YFSelectCategory;
         
-        self.userTableView.mj_footer.hidden = self.users.count ==0;
-        return self.users.count;
+        [self checkStates];
+        return category.users.count;
     }else{
         return self.categories.count;
     }
@@ -181,8 +207,10 @@ static NSString *const XMGUserID = @"user";
         return cell;
     }else
     {
+        
+        YFCategory *category = YFSelectCategory;
         YFUserCell *cell =  [YFUserCell cellWithTableView:tableView];
-        cell.user = self.users[indexPath.row];
+        cell.user = category.users[indexPath.row];
         
         return cell;
         
@@ -196,9 +224,24 @@ static NSString *const XMGUserID = @"user";
 #pragma mark - UITabelViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
     if(tableView == self.categoryTableView){
         
-         [self.userTableView.mj_header beginRefreshing];
+               
+        YFCategory *category = self.categories[indexPath.row];
+        
+        if(category.users.count){
+            [self.userTableView reloadData];
+            
+        }else{
+            [self.userTableView reloadData];
+            [self.userTableView.mj_header beginRefreshing];
+        }
+        
+        
+        
+        
+        
     }
 
     

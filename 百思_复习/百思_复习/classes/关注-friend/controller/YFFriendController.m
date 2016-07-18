@@ -8,6 +8,7 @@
 
 #import "YFFriendController.h"
 #import "YFRecommendFriendController.h"
+#import "YFLoginViewController.h"
 
 @interface YFFriendController ()
 
@@ -35,6 +36,14 @@
 {
     YFRecommendFriendController *vc = [[YFRecommendFriendController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
+}
+- (IBAction)loginBtn:(id)sender {
+    
+    NSLog(@"点击了登录按钮");
+    
+    YFLoginViewController *vc = [[YFLoginViewController alloc]init];
+    
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 @end

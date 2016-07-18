@@ -34,6 +34,9 @@
                         <color key="titleColor" red="1" green="0.14687089040000001" blue="0.16155180320000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <state key="highlighted" backgroundImage="friendsTrend_login_click"/>
+                    <connections>
+                        <action selector="loginBtn:" destination="-1" eventType="touchUpInside" id="qcn-iz-MBz"/>
+                    </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_cry_icon" translatesAutoresizingMaskIntoConstraints="NO" id="fmp-mz-83n">
                     <rect key="frame" x="276" y="182" width="48" height="48"/>

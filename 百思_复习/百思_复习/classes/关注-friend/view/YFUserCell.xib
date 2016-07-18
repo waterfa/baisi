@@ -28,7 +28,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc9-PW-fDr">
-                        <rect key="frame" x="70" y="41.5" width="37.5" height="18"/>
+                        <rect key="frame" x="70" y="42" width="37.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -40,16 +40,26 @@
                         </state>
                         <state key="highlighted" backgroundImage="FollowBtnClickBg"/>
                     </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZN-6D-cFD">
+                        <rect key="frame" x="0.0" y="67.5" width="313" height="3"/>
+                        <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="3" id="ix9-tr-0Va"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="igf-wU-ETV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="F1M-VC-oHJ"/>
+                    <constraint firstItem="JZN-6D-cFD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Gef-du-xhP"/>
                     <constraint firstItem="Dc9-PW-fDr" firstAttribute="bottom" secondItem="igf-wU-ETV" secondAttribute="bottom" id="HVV-L0-Suq"/>
                     <constraint firstItem="HZj-E0-Z8T" firstAttribute="top" secondItem="igf-wU-ETV" secondAttribute="top" id="ODr-wV-BQo"/>
                     <constraint firstItem="igf-wU-ETV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="UXa-Tw-jQH"/>
                     <constraint firstItem="HZj-E0-Z8T" firstAttribute="leading" secondItem="igf-wU-ETV" secondAttribute="trailing" constant="10" id="WWY-5v-vfb"/>
                     <constraint firstItem="ja7-uc-KJS" firstAttribute="centerY" secondItem="igf-wU-ETV" secondAttribute="centerY" id="Z1L-r0-7km"/>
+                    <constraint firstAttribute="bottom" secondItem="JZN-6D-cFD" secondAttribute="bottom" id="f80-zM-40f"/>
                     <constraint firstItem="Dc9-PW-fDr" firstAttribute="leading" secondItem="igf-wU-ETV" secondAttribute="trailing" constant="10" id="jQb-Ky-PoV"/>
                     <constraint firstAttribute="trailing" secondItem="ja7-uc-KJS" secondAttribute="trailing" constant="10" id="umm-Jp-RPn"/>
+                    <constraint firstAttribute="trailing" secondItem="JZN-6D-cFD" secondAttribute="trailing" id="yeO-xk-aZV"/>
                     <constraint firstAttribute="bottom" secondItem="igf-wU-ETV" secondAttribute="bottom" priority="750" constant="10" id="ztP-Uq-NeT"/>
                 </constraints>
             </tableViewCellContentView>
@@ -58,7 +68,7 @@
                 <outlet property="headerView" destination="igf-wU-ETV" id="fZf-SZ-kyX"/>
                 <outlet property="nameLabel" destination="HZj-E0-Z8T" id="VT3-bH-f8t"/>
             </connections>
-            <point key="canvasLocation" x="211.5" y="319.5"/>
+            <point key="canvasLocation" x="264.5" y="304.5"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -22,14 +22,14 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2tg-t1-2Ld">
-                        <rect key="frame" x="0.0" y="35.5" width="187" height="3"/>
+                        <rect key="frame" x="0.0" y="37.5" width="187" height="1"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="3" id="snm-qD-xg1"/>
+                            <constraint firstAttribute="height" constant="1" id="snm-qD-xg1"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2vv-Bv-CfZ">
-                        <rect key="frame" x="15" y="10" width="42" height="15.5"/>
+                        <rect key="frame" x="15" y="10" width="42" height="17.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>

@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-
 @interface YFCategory : NSObject
 /** name */
 @property(nonatomic,copy)NSString *name;
@@ -16,4 +15,8 @@
 /** id */
 @property(nonatomic,assign)int id;
 
+/** users */
+@property(nonatomic,strong)NSMutableArray *users;
+/** 总数 */
+@property(nonatomic,assign) NSInteger total;
 @end
