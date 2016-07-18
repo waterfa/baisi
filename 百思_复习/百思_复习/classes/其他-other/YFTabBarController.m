@@ -10,6 +10,7 @@
 #import "YFNavController.h"
 #import "YFTabBar.h"
 #import "YFFriendController.h"
+#import "YFEssenceViewController.h"
 
 @implementation YFTabBarController
 
@@ -21,7 +22,7 @@
     
     //添加子控制器
     
-    [self addNavWithVC:[[UIViewController alloc]init] title:@"精华" image:@"tabBar_essence_icon" selectImage:@"tabBar_essence_click_icon"];
+    [self addNavWithVC:[[YFEssenceViewController alloc]init] title:@"精华" image:@"tabBar_essence_icon" selectImage:@"tabBar_essence_click_icon"];
     
     [self addNavWithVC:[[UIViewController alloc]init] title:@"新帖" image:@"tabBar_new_icon" selectImage:@"tabBar_new_click_icon"];
     

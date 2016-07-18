@@ -224,9 +224,11 @@ static NSString *const XMGUserID = @"user";
 #pragma mark - UITabelViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    [self.userTableView.mj_header endRefreshing];
+    
+    
     if(tableView == self.categoryTableView){
-        
+        self.params = nil;
                
         YFCategory *category = self.categories[indexPath.row];
         

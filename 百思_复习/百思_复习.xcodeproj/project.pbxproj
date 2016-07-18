@@ -28,6 +28,7 @@
 		5A444E221D3BA6F000787F95 /* YFCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A444E201D3BA6F000787F95 /* YFCategoryCell.m */; };
 		5A444E231D3BA6F000787F95 /* YFCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A444E211D3BA6F000787F95 /* YFCategoryCell.xib */; };
 		5A444E251D3BECD800787F95 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A444E241D3BECD800787F95 /* Foundation+Log.m */; };
+		5A61B5F91D3D2965009ABB91 /* YFEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A61B5F81D3D2965009ABB91 /* YFEssenceViewController.m */; };
 		5AC936FB1D3C89C600F9237D /* YFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC936F91D3C89C600F9237D /* YFLoginViewController.m */; };
 		5AC936FC1D3C89C600F9237D /* YFLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AC936FA1D3C89C600F9237D /* YFLoginViewController.xib */; };
 		5AC936FF1D3C985400F9237D /* YFTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC936FE1D3C985400F9237D /* YFTextField.m */; };
@@ -93,6 +94,8 @@
 		5A444E201D3BA6F000787F95 /* YFCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFCategoryCell.m; sourceTree = "<group>"; };
 		5A444E211D3BA6F000787F95 /* YFCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFCategoryCell.xib; sourceTree = "<group>"; };
 		5A444E241D3BECD800787F95 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		5A61B5F71D3D2965009ABB91 /* YFEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFEssenceViewController.h; sourceTree = "<group>"; };
+		5A61B5F81D3D2965009ABB91 /* YFEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFEssenceViewController.m; sourceTree = "<group>"; };
 		5AC936F81D3C89C600F9237D /* YFLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFLoginViewController.h; sourceTree = "<group>"; };
 		5AC936F91D3C89C600F9237D /* YFLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFLoginViewController.m; sourceTree = "<group>"; };
 		5AC936FA1D3C89C600F9237D /* YFLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFLoginViewController.xib; sourceTree = "<group>"; };
@@ -367,6 +370,8 @@
 		5A2C01931D3A131B00501045 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				5A61B5F71D3D2965009ABB91 /* YFEssenceViewController.h */,
+				5A61B5F81D3D2965009ABB91 /* YFEssenceViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -585,6 +590,7 @@
 				5A2C01A51D3A1E8E00501045 /* YFCategory.m in Sources */,
 				5A2C01AC1D3A22D300501045 /* YFUserCell.m in Sources */,
 				5A2C01961D3A131B00501045 /* YFFriendController.m in Sources */,
+				5A61B5F91D3D2965009ABB91 /* YFEssenceViewController.m in Sources */,
 				5A2C019D1D3A131B00501045 /* UIView+YFExension.m in Sources */,
 				5A2C019B1D3A131B00501045 /* YFTabBar.m in Sources */,
 				5AC936FB1D3C89C600F9237D /* YFLoginViewController.m in Sources */,
