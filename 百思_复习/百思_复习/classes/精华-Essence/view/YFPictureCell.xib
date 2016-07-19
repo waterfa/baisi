@@ -15,11 +15,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="DhI-73-qx9" userLabel="backgroundImageView">
-                        <rect key="frame" x="0.0" y="0.5" width="337" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="337" height="44"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="fNe-Oz-iJd"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cM4-d5-tU2" customClass="YFProgressView">
+                        <rect key="frame" x="93" y="39" width="150" height="150"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="150" id="MnE-Gm-hPl"/>
+                            <constraint firstAttribute="width" constant="150" id="x4K-Ub-0OF"/>
+                        </constraints>
+                    </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="10b-6X-uhg">
                         <rect key="frame" x="0.0" y="0.0" width="337" height="226.5"/>
                     </imageView>
@@ -30,8 +38,8 @@
                             <constraint firstAttribute="height" constant="30" id="d60-j4-azq"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNc-Q6-oOC">
-                        <rect key="frame" x="0.0" y="196.5" width="337" height="30"/>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNc-Q6-oOC">
+                        <rect key="frame" x="0.0" y="196" width="337" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="YM4-Bt-FxY"/>
                         </constraints>
@@ -42,9 +50,11 @@
                     <constraint firstItem="erC-Pf-80z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3rs-Z3-3vI"/>
                     <constraint firstItem="erC-Pf-80z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9Cr-Rp-Vvg"/>
                     <constraint firstAttribute="bottom" secondItem="10b-6X-uhg" secondAttribute="bottom" id="9mZ-xt-1wj"/>
+                    <constraint firstItem="cM4-d5-tU2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CdJ-r0-Xez"/>
                     <constraint firstAttribute="trailing" secondItem="eNc-Q6-oOC" secondAttribute="trailing" id="DBT-mb-GW9"/>
                     <constraint firstAttribute="trailing" secondItem="10b-6X-uhg" secondAttribute="trailing" id="DKr-tB-m1C"/>
                     <constraint firstItem="DhI-73-qx9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="I7n-75-7ju"/>
+                    <constraint firstItem="cM4-d5-tU2" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="O6J-5M-8T2"/>
                     <constraint firstAttribute="bottom" secondItem="eNc-Q6-oOC" secondAttribute="bottom" id="PYS-E3-mBq"/>
                     <constraint firstItem="10b-6X-uhg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Q21-dA-6KD"/>
                     <constraint firstAttribute="trailing" secondItem="DhI-73-qx9" secondAttribute="trailing" id="RRX-w2-tRx"/>
@@ -59,9 +69,11 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.67450980390000004" green="0.67450980390000004" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="gifImage" destination="erC-Pf-80z" id="sPO-J2-73a"/>
                 <outlet property="mainImageView" destination="10b-6X-uhg" id="msb-ue-2Bv"/>
+                <outlet property="progressView" destination="cM4-d5-tU2" id="aVQ-hg-Btn"/>
                 <outlet property="seeBigBtn" destination="eNc-Q6-oOC" id="YNY-Fo-8HP"/>
             </connections>
             <point key="canvasLocation" x="195.5" y="326.5"/>

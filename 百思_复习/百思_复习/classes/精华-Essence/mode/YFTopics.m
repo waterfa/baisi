@@ -25,8 +25,8 @@
             CGFloat w = YFScreenW - 2 * YFTopicMargin;
             
             CGFloat h = w * self.height /self.width;
-            if(h > 400) {
-                h = 400;
+            if(h > 600) {
+                h = 600;
                 self.BigPicture = YES;
             };
             
