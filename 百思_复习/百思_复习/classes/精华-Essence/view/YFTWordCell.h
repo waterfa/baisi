@@ -1,5 +1,5 @@
 //
-//  YFTopicsViewController.h
+//  YFTWordCell.h
 //  百思_复习
 //
 //  Created by 钟永发 on 16/7/19.
@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class YFTopics;
+@interface YFTWordCell : UITableViewCell
 
-
-
-@interface YFTopicsViewController : UITableViewController
-/** 类型 */
-@property(nonatomic,assign)topicsType type;
+/** 模型 */
+@property(nonatomic,strong)YFTopics *topic;
 @end

@@ -66,8 +66,8 @@
                             </constraints>
                             <variation key="default">
                                 <mask key="constraints">
-                                    <exclude reference="acK-J2-X2a"/>
                                     <exclude reference="4oZ-4o-byJ"/>
+                                    <exclude reference="acK-J2-X2a"/>
                                 </mask>
                             </variation>
                         </view>

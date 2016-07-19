@@ -31,55 +31,63 @@
     [self setupNav];
     
     
-    
     [self setupContentScrollView];
+    [self addChildViewControllers];
     [self setupTitleView];
     
-    [self addChildViewControllers];
     
     
-    [self setframe];
+    
 }
 
 -(void)addChildViewControllers
 {
     YFTopicsViewController *all = [[YFTopicsViewController alloc]init];
-    all.subtitle = @"全部";
+    all.title = @"全部";
+    all.type = topicsTypeAll;
     [self addChildViewController:all];
-    [self.scrollView addSubview:all.view];
+
     
     YFTopicsViewController *video = [[YFTopicsViewController alloc]init];
-    video.subtitle = @"视频";
+    video.title = @"视频";
+    video.type = topicsTypeVideo;
     [self addChildViewController:video];
-    [self.scrollView addSubview:video.view];
     
     YFTopicsViewController *picture = [[YFTopicsViewController alloc]init];
-    picture.subtitle = @"图片";
+    picture.title = @"图片";
+    picture.type = topicsTypePicture;
     [self addChildViewController:picture];
-    [self.scrollView addSubview:picture.view];
     
     YFTopicsViewController *word = [[YFTopicsViewController alloc]init];
-    word.subtitle = @"段子";
+    word.title = @"段子";
+    word.type = topicsTypeWord;
     [self addChildViewController:word];
-    [self.scrollView addSubview:word.view];
     
     YFTopicsViewController *voice = [[YFTopicsViewController alloc]init];
-    voice.subtitle = @"声音";
+    voice.title = @"声音";
+    voice.type = topicsTypeVoice;
     [self addChildViewController:voice];
-    [self.scrollView addSubview:voice.view];
+    
+    //设置ScrollView 的contentSzie
+    self.scrollView.contentSize = CGSizeMake(self.childViewControllers.count * YFScreenW    , 0);
+    
+    //显示第一个子控制器
+    UITableViewController *vc = self.childViewControllers[0];
+    vc.tableView.frame = self.scrollView.bounds;
+    [self.scrollView addSubview:vc.view];
 }
 
-//设置子控制器的frame
--(void)setframe
-{
-    
-    for(int i=0;i<self.childViewControllers.count;i++){
-        
-        UIViewController *vc = self.childViewControllers[i];
-        vc.view.frame = CGRectMake(i* YFScreenW, 0, YFScreenW, YFScreenH);
-    }
-     self.scrollView.contentSize = CGSizeMake(self.childViewControllers.count * YFScreenW    , 0);
-}
+////设置子控制器的frame
+//-(void)setframe
+//{
+//    
+//    for(int i=0;i<self.childViewControllers.count;i++){
+//        
+//        UIViewController *vc = self.childViewControllers[i];
+//        vc.view.frame = CGRectMake(i* YFScreenW, 0, YFScreenW, YFScreenH);
+//    }
+//    ;
+//}
 -(void)setupContentScrollView
 {
     UIScrollView *scroll = [[UIScrollView alloc]init];
@@ -96,11 +104,10 @@
 }
 -(void)setupTitleView
 {
-    NSArray *titles = @[@"全部",@"视频",@"图片",@"段子",@"声音"];
     
     UIView *titleView = [[UIView alloc]init];
     titleView.frame = CGRectMake(0, 64, YFScreenW, 35);
-    titleView.backgroundColor = [YFGobalColor colorWithAlphaComponent:0.5];
+    titleView.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.5];
     [self.view addSubview:titleView];
     self.titlesView = titleView;
     //底部红色条
@@ -110,12 +117,12 @@
     [titleView addSubview:bottomV];
     self.bottomView = bottomV;
     
-    NSInteger count = titles.count;
+    NSInteger count = self.childViewControllers.count;
     CGFloat w = YFScreenW /count;
-    for (int i = 0; i<titles.count; i++) {
+    for (int i = 0; i<count; i++) {
         
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [btn setTitle:titles[i] forState:UIControlStateNormal];
+        [btn setTitle:self.childViewControllers[i].title forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
         [btn addTarget:self action:@selector(titleBtnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -158,6 +165,8 @@
     [self.scrollView setContentOffset:offsex animated:YES];
     
     
+    
+    
 }
 -(void)setupNav
 {
@@ -191,6 +200,7 @@
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
+    [self scrollViewDidEndScrollingAnimation:scrollView];
     NSInteger index = (int)(scrollView.contentOffset.x /YFScreenW);
     
     UIButton *btn = self.titlesView.subviews[index+1];
@@ -198,5 +208,20 @@
     [self titleBtnClick:btn];
     
 }
-
+-(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    
+    
+    NSInteger index = scrollView.contentOffset.x /YFScreenW;
+    
+    
+    UITableViewController *vc = self.childViewControllers[index];
+    vc.view.x = scrollView.contentOffset.x;
+    vc.tableView.y = 0;
+    vc.view.height = scrollView.height;
+    vc.view.width = scrollView.width;
+    
+    [scrollView addSubview:vc.view];
+    
+}
 @end

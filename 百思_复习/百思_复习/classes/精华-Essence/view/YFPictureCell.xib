@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="227" id="KGk-i7-Jjw" customClass="YFPictureCell">
+            <rect key="frame" x="0.0" y="0.0" width="337" height="227"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="337" height="226.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="DhI-73-qx9" userLabel="backgroundImageView">
+                        <rect key="frame" x="0.0" y="0.5" width="337" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="fNe-Oz-iJd"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="10b-6X-uhg">
+                        <rect key="frame" x="0.0" y="0.0" width="337" height="226.5"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="erC-Pf-80z">
+                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="7iv-jk-fCB"/>
+                            <constraint firstAttribute="height" constant="30" id="d60-j4-azq"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNc-Q6-oOC">
+                        <rect key="frame" x="0.0" y="196.5" width="337" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="YM4-Bt-FxY"/>
+                        </constraints>
+                        <state key="normal" title="查看大图" image="see-big-picture" backgroundImage="see-big-picture-background"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="erC-Pf-80z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3rs-Z3-3vI"/>
+                    <constraint firstItem="erC-Pf-80z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9Cr-Rp-Vvg"/>
+                    <constraint firstAttribute="bottom" secondItem="10b-6X-uhg" secondAttribute="bottom" id="9mZ-xt-1wj"/>
+                    <constraint firstAttribute="trailing" secondItem="eNc-Q6-oOC" secondAttribute="trailing" id="DBT-mb-GW9"/>
+                    <constraint firstAttribute="trailing" secondItem="10b-6X-uhg" secondAttribute="trailing" id="DKr-tB-m1C"/>
+                    <constraint firstItem="DhI-73-qx9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="I7n-75-7ju"/>
+                    <constraint firstAttribute="bottom" secondItem="eNc-Q6-oOC" secondAttribute="bottom" id="PYS-E3-mBq"/>
+                    <constraint firstItem="10b-6X-uhg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Q21-dA-6KD"/>
+                    <constraint firstAttribute="trailing" secondItem="DhI-73-qx9" secondAttribute="trailing" id="RRX-w2-tRx"/>
+                    <constraint firstAttribute="bottom" secondItem="DhI-73-qx9" secondAttribute="bottom" id="YmY-Jk-pOc"/>
+                    <constraint firstItem="DhI-73-qx9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dsf-Nt-a4w"/>
+                    <constraint firstItem="10b-6X-uhg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ijV-XQ-Rf6"/>
+                    <constraint firstItem="eNc-Q6-oOC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zil-Aq-D3w"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="YmY-Jk-pOc"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="gifImage" destination="erC-Pf-80z" id="sPO-J2-73a"/>
+                <outlet property="mainImageView" destination="10b-6X-uhg" id="msb-ue-2Bv"/>
+                <outlet property="seeBigBtn" destination="eNc-Q6-oOC" id="YNY-Fo-8HP"/>
+            </connections>
+            <point key="canvasLocation" x="195.5" y="326.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="common-gif" width="31" height="31"/>
+        <image name="imageBackground" width="75" height="15"/>
+        <image name="see-big-picture" width="19" height="19"/>
+        <image name="see-big-picture-background" width="285" height="43"/>
+    </resources>
+</document>

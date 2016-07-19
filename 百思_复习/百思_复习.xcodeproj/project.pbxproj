@@ -29,6 +29,12 @@
 		5A444E231D3BA6F000787F95 /* YFCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A444E211D3BA6F000787F95 /* YFCategoryCell.xib */; };
 		5A444E251D3BECD800787F95 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A444E241D3BECD800787F95 /* Foundation+Log.m */; };
 		5A4BFC2D1D3DC714001BBA90 /* YFTopicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4BFC2C1D3DC714001BBA90 /* YFTopicsViewController.m */; };
+		5A4BFC301D3DE36F001BBA90 /* YFTopics.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4BFC2F1D3DE36F001BBA90 /* YFTopics.m */; };
+		5A4BFC341D3DEAE5001BBA90 /* YFTWordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4BFC321D3DEAE5001BBA90 /* YFTWordCell.m */; };
+		5A4BFC351D3DEAE5001BBA90 /* YFTWordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A4BFC331D3DEAE5001BBA90 /* YFTWordCell.xib */; };
+		5A4BFC391D3E2A4C001BBA90 /* YFPictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4BFC371D3E2A4C001BBA90 /* YFPictureCell.m */; };
+		5A4BFC3A1D3E2A4C001BBA90 /* YFPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A4BFC381D3E2A4C001BBA90 /* YFPictureCell.xib */; };
+		5A4BFC3D1D3E2F0B001BBA90 /* YFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4BFC3C1D3E2F0B001BBA90 /* YFConst.m */; };
 		5A61B5F91D3D2965009ABB91 /* YFEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A61B5F81D3D2965009ABB91 /* YFEssenceViewController.m */; };
 		5AC936FB1D3C89C600F9237D /* YFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC936F91D3C89C600F9237D /* YFLoginViewController.m */; };
 		5AC936FC1D3C89C600F9237D /* YFLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AC936FA1D3C89C600F9237D /* YFLoginViewController.xib */; };
@@ -97,6 +103,16 @@
 		5A444E241D3BECD800787F95 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		5A4BFC2B1D3DC714001BBA90 /* YFTopicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFTopicsViewController.h; sourceTree = "<group>"; };
 		5A4BFC2C1D3DC714001BBA90 /* YFTopicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFTopicsViewController.m; sourceTree = "<group>"; };
+		5A4BFC2E1D3DE36F001BBA90 /* YFTopics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFTopics.h; sourceTree = "<group>"; };
+		5A4BFC2F1D3DE36F001BBA90 /* YFTopics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFTopics.m; sourceTree = "<group>"; };
+		5A4BFC311D3DEAE5001BBA90 /* YFTWordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFTWordCell.h; sourceTree = "<group>"; };
+		5A4BFC321D3DEAE5001BBA90 /* YFTWordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFTWordCell.m; sourceTree = "<group>"; };
+		5A4BFC331D3DEAE5001BBA90 /* YFTWordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFTWordCell.xib; sourceTree = "<group>"; };
+		5A4BFC361D3E2A4C001BBA90 /* YFPictureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFPictureCell.h; sourceTree = "<group>"; };
+		5A4BFC371D3E2A4C001BBA90 /* YFPictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFPictureCell.m; sourceTree = "<group>"; };
+		5A4BFC381D3E2A4C001BBA90 /* YFPictureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFPictureCell.xib; sourceTree = "<group>"; };
+		5A4BFC3B1D3E2F0B001BBA90 /* YFConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFConst.h; sourceTree = "<group>"; };
+		5A4BFC3C1D3E2F0B001BBA90 /* YFConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFConst.m; sourceTree = "<group>"; };
 		5A61B5F71D3D2965009ABB91 /* YFEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFEssenceViewController.h; sourceTree = "<group>"; };
 		5A61B5F81D3D2965009ABB91 /* YFEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFEssenceViewController.m; sourceTree = "<group>"; };
 		5AC936F81D3C89C600F9237D /* YFLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFLoginViewController.h; sourceTree = "<group>"; };
@@ -294,6 +310,8 @@
 			children = (
 				5A2C01881D3A131B00501045 /* UIView+YFExension.h */,
 				5A2C01891D3A131B00501045 /* UIView+YFExension.m */,
+				5A4BFC3B1D3E2F0B001BBA90 /* YFConst.h */,
+				5A4BFC3C1D3E2F0B001BBA90 /* YFConst.m */,
 			);
 			path = "分类";
 			sourceTree = "<group>";
@@ -384,6 +402,8 @@
 		5A2C01941D3A131B00501045 /* mode */ = {
 			isa = PBXGroup;
 			children = (
+				5A4BFC2E1D3DE36F001BBA90 /* YFTopics.h */,
+				5A4BFC2F1D3DE36F001BBA90 /* YFTopics.m */,
 			);
 			path = mode;
 			sourceTree = "<group>";
@@ -391,6 +411,12 @@
 		5A2C01951D3A131B00501045 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				5A4BFC311D3DEAE5001BBA90 /* YFTWordCell.h */,
+				5A4BFC321D3DEAE5001BBA90 /* YFTWordCell.m */,
+				5A4BFC331D3DEAE5001BBA90 /* YFTWordCell.xib */,
+				5A4BFC361D3E2A4C001BBA90 /* YFPictureCell.h */,
+				5A4BFC371D3E2A4C001BBA90 /* YFPictureCell.m */,
+				5A4BFC381D3E2A4C001BBA90 /* YFPictureCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -512,11 +538,13 @@
 			files = (
 				5A2C013E1D39EC1C00501045 /* LaunchScreen.storyboard in Resources */,
 				5A2C01A21D3A15C300501045 /* YFRecommendFriendController.xib in Resources */,
+				5A4BFC3A1D3E2A4C001BBA90 /* YFPictureCell.xib in Resources */,
 				5A2C01AD1D3A22D300501045 /* YFUserCell.xib in Resources */,
 				5AC936FC1D3C89C600F9237D /* YFLoginViewController.xib in Resources */,
 				5A2C013B1D39EC1C00501045 /* Assets.xcassets in Resources */,
 				5A444E231D3BA6F000787F95 /* YFCategoryCell.xib in Resources */,
 				5A2C01971D3A131B00501045 /* YFFriendController.xib in Resources */,
+				5A4BFC351D3DEAE5001BBA90 /* YFTWordCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,11 +626,15 @@
 				5A61B5F91D3D2965009ABB91 /* YFEssenceViewController.m in Sources */,
 				5A4BFC2D1D3DC714001BBA90 /* YFTopicsViewController.m in Sources */,
 				5A2C019D1D3A131B00501045 /* UIView+YFExension.m in Sources */,
+				5A4BFC391D3E2A4C001BBA90 /* YFPictureCell.m in Sources */,
+				5A4BFC301D3DE36F001BBA90 /* YFTopics.m in Sources */,
 				5A2C019B1D3A131B00501045 /* YFTabBar.m in Sources */,
+				5A4BFC3D1D3E2F0B001BBA90 /* YFConst.m in Sources */,
 				5AC936FB1D3C89C600F9237D /* YFLoginViewController.m in Sources */,
 				5A2C01991D3A131B00501045 /* main.m in Sources */,
 				5AC936FF1D3C985400F9237D /* YFTextField.m in Sources */,
 				5A2C01A11D3A15C300501045 /* YFRecommendFriendController.m in Sources */,
+				5A4BFC341D3DEAE5001BBA90 /* YFTWordCell.m in Sources */,
 				5A2C01981D3A131B00501045 /* AppDelegate.m in Sources */,
 				5A444E251D3BECD800787F95 /* Foundation+Log.m in Sources */,
 				5A2C019C1D3A131B00501045 /* YFTabBarController.m in Sources */,
