@@ -19,5 +19,9 @@
 #define YFScreenH [UIScreen mainScreen].bounds.size.height
 #define YFScreenW [UIScreen mainScreen].bounds.size.width
 
+#define YFEssenceTitleViewH 35
+#define YFEssenceContentViewY (64+(YFEssenceTitleViewH))
+#define YFTabBarH 44
+
 
 #endif /* PrefixHeader_pch */

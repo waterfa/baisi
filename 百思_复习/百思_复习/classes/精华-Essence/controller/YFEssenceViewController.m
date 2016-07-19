@@ -7,13 +7,20 @@
 //
 
 #import "YFEssenceViewController.h"
+#import "YFTopicsViewController.h"
 
-@interface YFEssenceViewController ()
+#define tableViewH YFScreenH - 64-35-44
+
+@interface YFEssenceViewController () <UIScrollViewDelegate>
 
 /** 选中的按钮 */
 @property(nonatomic,weak)UIButton *selectBtn;
+/** titleView */
+@property(nonatomic,strong)UIView *titlesView;
 /** 底部红色条 */
 @property(nonatomic,strong)UIView *bottomView;
+/** scrollview */
+@property(nonatomic,strong)UIScrollView *scrollView;
 @end
 
 @implementation YFEssenceViewController
@@ -23,7 +30,69 @@
    
     [self setupNav];
     
+    
+    
+    [self setupContentScrollView];
     [self setupTitleView];
+    
+    [self addChildViewControllers];
+    
+    
+    [self setframe];
+}
+
+-(void)addChildViewControllers
+{
+    YFTopicsViewController *all = [[YFTopicsViewController alloc]init];
+    all.subtitle = @"全部";
+    [self addChildViewController:all];
+    [self.scrollView addSubview:all.view];
+    
+    YFTopicsViewController *video = [[YFTopicsViewController alloc]init];
+    video.subtitle = @"视频";
+    [self addChildViewController:video];
+    [self.scrollView addSubview:video.view];
+    
+    YFTopicsViewController *picture = [[YFTopicsViewController alloc]init];
+    picture.subtitle = @"图片";
+    [self addChildViewController:picture];
+    [self.scrollView addSubview:picture.view];
+    
+    YFTopicsViewController *word = [[YFTopicsViewController alloc]init];
+    word.subtitle = @"段子";
+    [self addChildViewController:word];
+    [self.scrollView addSubview:word.view];
+    
+    YFTopicsViewController *voice = [[YFTopicsViewController alloc]init];
+    voice.subtitle = @"声音";
+    [self addChildViewController:voice];
+    [self.scrollView addSubview:voice.view];
+}
+
+//设置子控制器的frame
+-(void)setframe
+{
+    
+    for(int i=0;i<self.childViewControllers.count;i++){
+        
+        UIViewController *vc = self.childViewControllers[i];
+        vc.view.frame = CGRectMake(i* YFScreenW, 0, YFScreenW, YFScreenH);
+    }
+     self.scrollView.contentSize = CGSizeMake(self.childViewControllers.count * YFScreenW    , 0);
+}
+-(void)setupContentScrollView
+{
+    UIScrollView *scroll = [[UIScrollView alloc]init];
+    scroll.frame = self.view.bounds;
+
+//    scroll.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:scroll];
+    self.scrollView = scroll;
+    scroll.delegate = self;
+
+    scroll.pagingEnabled = YES;
+    scroll.bounces = NO;
+    
 }
 -(void)setupTitleView
 {
@@ -31,8 +100,9 @@
     
     UIView *titleView = [[UIView alloc]init];
     titleView.frame = CGRectMake(0, 64, YFScreenW, 35);
+    titleView.backgroundColor = [YFGobalColor colorWithAlphaComponent:0.5];
     [self.view addSubview:titleView];
-    
+    self.titlesView = titleView;
     //底部红色条
     UIView *bottomV = [[UIView alloc]init];
     bottomV.frame = CGRectMake(0, 32, 20, 3);
@@ -81,6 +151,12 @@
         
     }];
     
+    NSInteger index = [self.titlesView.subviews indexOfObject:btn] -1;
+    CGPoint offsex = self.scrollView.contentOffset;
+    offsex.x =  index * YFScreenW;
+    
+    [self.scrollView setContentOffset:offsex animated:YES];
+    
     
 }
 -(void)setupNav
@@ -107,6 +183,20 @@
 -(void)menuBtnClick
 {
     NSLog(@"点击了菜单按钮");
+}
+
+
+#pragma mark - <UIScrollViewDelegate>
+
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    NSInteger index = (int)(scrollView.contentOffset.x /YFScreenW);
+    
+    UIButton *btn = self.titlesView.subviews[index+1];
+    
+    [self titleBtnClick:btn];
+    
 }
 
 @end
