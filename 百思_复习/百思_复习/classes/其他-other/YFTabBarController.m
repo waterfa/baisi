@@ -21,10 +21,14 @@
     
     
     //添加子控制器
+    YFEssenceViewController *essence = [[YFEssenceViewController alloc]init];
+    essence.a = @"list";
+    [self addNavWithVC:essence title:@"精华" image:@"tabBar_essence_icon" selectImage:@"tabBar_essence_click_icon"];
     
-    [self addNavWithVC:[[YFEssenceViewController alloc]init] title:@"精华" image:@"tabBar_essence_icon" selectImage:@"tabBar_essence_click_icon"];
+    YFEssenceViewController *new = [[YFEssenceViewController alloc]init];
+    new.a = @"newlist";
     
-    [self addNavWithVC:[[UIViewController alloc]init] title:@"新帖" image:@"tabBar_new_icon" selectImage:@"tabBar_new_click_icon"];
+    [self addNavWithVC:new title:@"新帖" image:@"tabBar_new_icon" selectImage:@"tabBar_new_click_icon"];
     
     [self addNavWithVC:[[YFFriendController alloc]init] title:@"关注" image:@"tabBar_friendTrends_icon" selectImage:@"tabBar_friendTrends_click_icon"];
     

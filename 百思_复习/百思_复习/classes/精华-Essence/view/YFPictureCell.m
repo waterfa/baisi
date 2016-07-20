@@ -11,6 +11,7 @@
 #import <SDWebImageDownloader.h>
 #import "YFProgressView.h"
 #import "YFTopics.h"
+#import "YFShowPictureViewController.h"
 
 @interface YFPictureCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *gifImage;
@@ -22,10 +23,25 @@
 
 @end
 @implementation YFPictureCell
+- (IBAction)seeBigPic:(id)sender {
+    
+    [self showPicture];
+}
 
 - (void)awakeFromNib {
    
+    self.mainImageView.userInteractionEnabled = YES;
     
+    [self.mainImageView addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showPicture)]];
+    
+}
+
+-(void)showPicture
+{
+    YFShowPictureViewController *vc = [[YFShowPictureViewController alloc]init];
+//    vc.view.frame = [UIScreen mainScreen].bounds;
+    vc.topic = self.topic;
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vc animated:NO completion:nil];
 }
 
 +(instancetype)picture
@@ -38,13 +54,14 @@
     _topic = topic;
     
     //加载图片
-    [self.mainImageView sd_setImageWithURL:[NSURL URLWithString:topic.image0] placeholderImage:nil options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    [self.mainImageView sd_setImageWithURL:[NSURL URLWithString:topic.image2] placeholderImage:nil options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         
-        CGFloat progress = (receivedSize * 1.0 )/(expectedSize * 1.0);
-        [self.progressView setProgress:progress animated:YES];
+//        CGFloat progress = (receivedSize * 1.0 )/(expectedSize * 1.0);
+//        [self.progressView setProgress:progress animated:YES];
         
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
+//        self.progressView.hidden = YES;
         
         if(topic.BigPicture){
             
@@ -66,7 +83,7 @@
     }];
     
     self.seeBigBtn.hidden = !topic.BigPicture;
-    NSString *str = [topic.image0 pathExtension];
+    NSString *str = [topic.image2 pathExtension];
     
     self.gifImage.hidden = ![str isEqualToString:@"gif"];
     

@@ -9,9 +9,11 @@
 #import "AppDelegate.h"
 #import "YFTabBarController.h"
 #import "YFNavController.h"
+#import "YFShowTopViewController.h"
 
 @interface AppDelegate ()
-
+/** window */
+@property(nonatomic,strong)UIWindow *showWindow;
 @end
 
 @implementation AppDelegate
@@ -26,6 +28,19 @@
     
     
     self.window.rootViewController = tabVc;
+    
+    
+    
+    //添加跳到顶部功能
+    UIWindow *window = [[UIWindow alloc]init];
+    window.frame = CGRectMake(0, 0, YFScreenW, 20);
+    window.windowLevel = UIWindowLevelAlert;
+    window.backgroundColor = [UIColor clearColor];
+    YFShowTopViewController *vc = [[YFShowTopViewController alloc]init];
+    vc.view.frame = window.bounds;
+    window.rootViewController =vc;
+    window.hidden = NO;
+    self.showWindow = window;
     
     [self.window makeKeyAndVisible];
     

@@ -20,24 +20,18 @@
         CGFloat labelY = 70 ;
         _cellHeight = labelH + labelY +YFTopicMargin ;
         
-        if(self.type == topicsTypePicture){
-            
-            CGFloat w = YFScreenW - 2 * YFTopicMargin;
-            
-            CGFloat h = w * self.height /self.width;
-            if(h > 600) {
-                h = 600;
-                self.BigPicture = YES;
-            };
-            
-            CGFloat x = YFTopicMargin;
-            CGFloat y = labelH + 70 + YFTopicMargin;
-            
-            _pictureF = CGRectMake(x, y , w , h);
-            
-            
-            
-            
+        CGFloat w = YFScreenW - 2 * YFTopicMargin;
+        CGFloat h = w * self.height /self.width;
+        if(h > 600) {
+            h = 600;
+            self.BigPicture = YES;
+        };
+        CGFloat x = YFTopicMargin;
+        CGFloat y = labelH + 70 + YFTopicMargin;
+        
+        _pictureF = CGRectMake(x, y , w , h);
+        
+        if(self.type == topicsTypePicture || self.type == topicsTypeVoice || self.type == topicsTypeVideo){
             _cellHeight += h + YFTopicMargin;
         }
         

@@ -10,7 +10,8 @@
 #import <UIImageView+WebCache.h>
 #import "YFTopics.h"
 #import "YFPictureCell.h"
-
+#import "YFVideoCell.h"
+#import "YFVoiceCell.h"
 
 @interface YFTWordCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *profile_image;
@@ -26,8 +27,22 @@
 
 /** 图片Cell */
 @property(nonatomic,strong)YFPictureCell *picture;
+/** 视频Cell */
+@property(nonatomic,strong)YFVideoCell *video;
+/** 声音 */
+@property(nonatomic,strong)YFVoiceCell *voice;
+
 @end
 @implementation YFTWordCell
+-(YFVoiceCell *)voice
+{
+    if(!_voice)
+    {
+        _voice = [YFVoiceCell voice];
+        [self.contentView addSubview:_voice];
+    }
+    return _voice;
+}
 -(YFPictureCell *)picture
 {
     if(!_picture)
@@ -38,7 +53,16 @@
     }
     return _picture;
 }
-
+-(YFVideoCell *)video
+{
+    if(!_video)
+    {
+        _video = [YFVideoCell video];
+        [self.contentView addSubview:_video];
+        
+    }
+    return _video;
+}
 - (void)awakeFromNib {
 }
 
@@ -65,7 +89,32 @@
         
         self.picture.topic = topic;
         self.picture.frame = topic.pictureF;
+        self.picture.hidden = NO;
         
+        self.video.hidden = YES;
+        
+    }else if(self.topic.type == topicsTypeVideo){
+        
+        self.video.topic = topic;
+        self.video.frame = topic.pictureF;
+        self.video.hidden = NO;
+        
+        self.picture.hidden = YES;
+        self.voice.hidden = YES;
+        
+    }else if (self.topic.type == topicsTypeVoice)
+    {
+        self.voice.topic = topic;
+        self.voice.frame = topic.pictureF;
+        
+        self.picture.hidden = YES;
+        self.video.hidden = YES;
+        self.voice.hidden = NO;
+    }else
+    {
+        self.voice.hidden = YES;
+        self.video.hidden = YES;
+        self.picture.hidden = YES;
     }
     
 }
@@ -79,6 +128,24 @@
 
 
 - (IBAction)menuClick:(id)sender {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"默默收藏了");
+    }];
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"举报" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"默默举报了");
+    }];
+    
+    UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    
+    [alert addAction:action1];
+    [alert addAction:action2];
+    [alert addAction:action3];
+    
+    [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+    
 }
 
 @end

@@ -92,4 +92,17 @@
 {
     return self.center.y;
 }
+
+-(BOOL)isShowOnWindow
+{
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    
+    CGRect newframe = [window convertRect:self.frame fromView:self.superview];
+    
+    CGRect windowBounds = window.bounds;
+    
+    BOOL intersects = CGRectIntersectsRect(newframe, windowBounds);
+    
+    return !self.hidden&& self.alpha>0.01 && intersects && self.window == window ;
+}
 @end

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="208" id="KGk-i7-Jjw" customClass="YFVoiceCell">
+            <rect key="frame" x="0.0" y="0.0" width="305" height="208"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="305" height="207.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="y7f-jR-ejd">
+                        <rect key="frame" x="0.0" y="10" width="305" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="Jc4-zd-O7s"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nsx-WT-69S">
+                        <rect key="frame" x="0.0" y="0.5" width="305" height="207.5"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vc9-gQ-esH">
+                        <rect key="frame" x="121" y="73" width="63" height="63"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="63" id="spg-ZO-wFO"/>
+                            <constraint firstAttribute="height" constant="63" id="xeh-9I-aTT"/>
+                        </constraints>
+                        <state key="normal" image="playButtonPlay" backgroundImage="playButton"/>
+                        <state key="selected" image="playButtonPause"/>
+                        <state key="highlighted" backgroundImage="playButtonClick"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Nsx-WT-69S" secondAttribute="trailing" id="Ara-xR-L35"/>
+                    <constraint firstItem="Vc9-gQ-esH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Bol-1R-0Kh"/>
+                    <constraint firstAttribute="bottom" secondItem="Nsx-WT-69S" secondAttribute="bottom" id="On0-qG-5Mz"/>
+                    <constraint firstAttribute="trailing" secondItem="y7f-jR-ejd" secondAttribute="trailing" id="SjU-qS-v3U"/>
+                    <constraint firstItem="y7f-jR-ejd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="U0n-zh-X3N"/>
+                    <constraint firstItem="Vc9-gQ-esH" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Xfh-d4-byl"/>
+                    <constraint firstItem="Nsx-WT-69S" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="k26-67-jlc"/>
+                    <constraint firstItem="y7f-jR-ejd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="mJo-0t-FLs"/>
+                    <constraint firstItem="Nsx-WT-69S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oZ4-R1-fHK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="mainImage" destination="Nsx-WT-69S" id="j4T-NS-r3p"/>
+            </connections>
+            <point key="canvasLocation" x="197.5" y="389"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="imageBackground" width="75" height="15"/>
+        <image name="playButton" width="63" height="63"/>
+        <image name="playButtonClick" width="63" height="63"/>
+        <image name="playButtonPause" width="26" height="26"/>
+        <image name="playButtonPlay" width="30" height="30"/>
+    </resources>
+</document>

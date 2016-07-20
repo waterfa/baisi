@@ -39,11 +39,14 @@
                         </constraints>
                     </imageView>
                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNc-Q6-oOC">
-                        <rect key="frame" x="0.0" y="196" width="337" height="30"/>
+                        <rect key="frame" x="0.0" y="191" width="337" height="35"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="YM4-Bt-FxY"/>
+                            <constraint firstAttribute="height" constant="35" id="YM4-Bt-FxY"/>
                         </constraints>
                         <state key="normal" title="查看大图" image="see-big-picture" backgroundImage="see-big-picture-background"/>
+                        <connections>
+                            <action selector="seeBigPic:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="09H-iK-Vcj"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

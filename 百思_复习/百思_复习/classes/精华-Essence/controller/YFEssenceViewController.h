@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface YFEssenceViewController : UIViewController
-
+/** type */
+@property(nonatomic,strong)NSString *a;
 @end

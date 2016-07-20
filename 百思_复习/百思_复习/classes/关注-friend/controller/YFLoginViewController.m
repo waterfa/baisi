@@ -25,6 +25,8 @@
     [super viewDidLoad];
 
     
+    
+    
     //设置头像圆角
     self.registBtn.layer.cornerRadius = self.registBtn.height *0.2;
     self.registBtn.layer.masksToBounds = YES;
@@ -55,6 +57,11 @@
     }];
     
 }
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (IBAction)dismiss:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -64,5 +71,6 @@
 - (IBAction)forgetPwd:(id)sender {
     NSLog(@"忘记密码？");
 }
+
 
 @end

@@ -11,7 +11,6 @@
 @implementation YFProgressView
 -(void)setProgress:(CGFloat)progress animated:(BOOL)animated
 {
-    NSLog(@"%.2f",progress);
     self.progressLabel.text = [NSString stringWithFormat:@"%.0f",progress * 100];
     [super setProgress:progress animated:YES];
 }

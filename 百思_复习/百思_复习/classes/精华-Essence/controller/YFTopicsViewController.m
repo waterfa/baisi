@@ -12,7 +12,7 @@
 #import <MJRefresh.h>
 #import "YFTopics.h"
 #import "YFTWordCell.h"
-
+#import "YFEssenceViewController.h"
 
 @interface YFTopicsViewController ()
 /** 存放模型的数组 */
@@ -83,7 +83,9 @@ static NSString *const YFTopicID = @"topic";
 -(void)loadNewData
 {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    YFEssenceViewController *vc = (YFEssenceViewController *) self.parentViewController ;
+    
+    params[@"a"] = vc.a ;
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     
