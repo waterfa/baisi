@@ -7,8 +7,33 @@
 //
 
 #import "YFNavController.h"
+#import <Foundation/Foundation.h>
 
+
+@interface YFNavController ()
+
+@end
 @implementation YFNavController
+
++(void)initialize
+{
+    UINavigationBar *bar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[[self class]]];
+    NSMutableDictionary *attr = [NSMutableDictionary dictionary];
+    attr[NSFontAttributeName] = [UIFont systemFontOfSize:25];
+    
+    bar.titleTextAttributes = attr;
+}
+
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+//    self.navigationBar.titleTextAttributes
+    
+    
+    
+    
+}
 
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {

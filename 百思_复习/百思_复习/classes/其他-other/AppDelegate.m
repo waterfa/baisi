@@ -10,6 +10,7 @@
 #import "YFTabBarController.h"
 #import "YFNavController.h"
 #import "YFShowTopViewController.h"
+#import "YFPushGuideView.h"
 
 @interface AppDelegate ()
 /** window */
@@ -31,6 +32,10 @@
     
     
     
+    
+    
+    
+    
     //添加跳到顶部功能
     UIWindow *window = [[UIWindow alloc]init];
     window.frame = CGRectMake(0, 0, YFScreenW, 20);
@@ -45,6 +50,8 @@
     [self.window makeKeyAndVisible];
     
     
+    //添加向导View
+    [YFPushGuideView show];
     
     
     return YES;

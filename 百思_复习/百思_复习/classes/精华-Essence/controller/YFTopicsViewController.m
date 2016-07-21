@@ -90,7 +90,6 @@ static NSString *const YFTopicID = @"topic";
     params[@"type"] = @(self.type);
     
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"加载成功");
         
         NSArray *topics = [YFTopics mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         

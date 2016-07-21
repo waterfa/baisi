@@ -8,6 +8,7 @@
 
 #import "YFEssenceViewController.h"
 #import "YFTopicsViewController.h"
+#import "YFRecommendViewController.h"
 
 #define tableViewH YFScreenH - 64-35-44
 
@@ -191,7 +192,8 @@
 
 -(void)menuBtnClick
 {
-    NSLog(@"点击了菜单按钮");
+    YFRecommendViewController *vc = [[YFRecommendViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

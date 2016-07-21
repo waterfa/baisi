@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YFRecommendViewController">
+            <connections>
+                <outlet property="tableView" destination="DVf-TR-wDP" id="PfT-ku-esw"/>
+                <outlet property="textField" destination="Zq5-Zr-PWR" id="yWe-37-m1D"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="448"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DVf-TR-wDP">
+                    <rect key="frame" x="10" y="114" width="330" height="324"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ree-MK-A5w"/>
+                        <outlet property="delegate" destination="-1" id="khn-gi-5do"/>
+                    </connections>
+                </tableView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="搜索搜索素偶所素偶搜哦搜偶素欧搜索搜素偶" textAlignment="center" minimumFontSize="17" background="friendsTrend_login" translatesAutoresizingMaskIntoConstraints="NO" id="Zq5-Zr-PWR" customClass="YFSearchField">
+                    <rect key="frame" x="10" y="74" width="330" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.14687089040000001" blue="0.16155180320000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="F12-tj-kVo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="DVf-TR-wDP" secondAttribute="bottom" constant="10" id="9tq-FO-Ggw"/>
+                <constraint firstItem="DVf-TR-wDP" firstAttribute="top" secondItem="Zq5-Zr-PWR" secondAttribute="bottom" constant="10" id="9w9-1Z-1Yl"/>
+                <constraint firstItem="Zq5-Zr-PWR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Ue7-KT-4eF"/>
+                <constraint firstAttribute="trailing" secondItem="Zq5-Zr-PWR" secondAttribute="trailing" constant="10" id="cp3-bk-ek4"/>
+                <constraint firstAttribute="trailing" secondItem="DVf-TR-wDP" secondAttribute="trailing" constant="10" id="cph-Ci-Gf2"/>
+                <constraint firstItem="DVf-TR-wDP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="jIM-dm-mhb"/>
+                <constraint firstItem="Zq5-Zr-PWR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="kSQ-wl-jXl"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="42" y="27"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="friendsTrend_login" width="243" height="48"/>
+    </resources>
+</document>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YFPushGuideView">
+            <rect key="frame" x="0.0" y="0.0" width="289" height="399"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushguidebg" translatesAutoresizingMaskIntoConstraints="NO" id="L4a-5C-PsS">
+                    <rect key="frame" x="0.0" y="0.0" width="289" height="399"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushguidetop" translatesAutoresizingMaskIntoConstraints="NO" id="zJr-3s-XUx">
+                    <rect key="frame" x="19" y="42" width="250" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="0Lm-0K-xH6"/>
+                        <constraint firstAttribute="height" constant="55" id="uLq-nQ-QbQ"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushguidemid" translatesAutoresizingMaskIntoConstraints="NO" id="2So-2v-ouQ">
+                    <rect key="frame" x="19" y="137" width="250" height="125"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="125" id="hhL-gf-uZY"/>
+                        <constraint firstAttribute="width" constant="250" id="suW-1a-3hM"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushguidebot" translatesAutoresizingMaskIntoConstraints="NO" id="8o4-VW-1aI">
+                    <rect key="frame" x="79" y="282" width="130" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="130" id="EYg-9Q-bXn"/>
+                        <constraint firstAttribute="height" constant="90" id="p4a-Hf-BoS"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exX-QW-UmT">
+                    <rect key="frame" x="79" y="332" width="100" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="PJR-6E-yYe"/>
+                        <constraint firstAttribute="height" constant="40" id="gMw-Tw-gS6"/>
+                    </constraints>
+                    <connections>
+                        <action selector="close:" destination="iN0-l3-epB" eventType="touchUpInside" id="Fyd-nK-5l5"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="L4a-5C-PsS" secondAttribute="bottom" id="1rm-EP-APW"/>
+                <constraint firstItem="zJr-3s-XUx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="7GO-d2-4si"/>
+                <constraint firstItem="8o4-VW-1aI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Brd-Jq-f3J"/>
+                <constraint firstItem="exX-QW-UmT" firstAttribute="leading" secondItem="8o4-VW-1aI" secondAttribute="leading" id="MNQ-ml-r2V"/>
+                <constraint firstItem="2So-2v-ouQ" firstAttribute="top" secondItem="zJr-3s-XUx" secondAttribute="bottom" constant="40" id="SCj-5A-5OX"/>
+                <constraint firstItem="8o4-VW-1aI" firstAttribute="top" secondItem="2So-2v-ouQ" secondAttribute="bottom" constant="20" id="cMX-D0-S3O"/>
+                <constraint firstItem="exX-QW-UmT" firstAttribute="bottom" secondItem="8o4-VW-1aI" secondAttribute="bottom" id="dSi-xK-CAC"/>
+                <constraint firstItem="zJr-3s-XUx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="er5-Nq-KlK"/>
+                <constraint firstItem="L4a-5C-PsS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hJW-2F-ppK"/>
+                <constraint firstItem="2So-2v-ouQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="sgF-29-aZd"/>
+                <constraint firstItem="2So-2v-ouQ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="tLq-mq-wHM"/>
+                <constraint firstItem="L4a-5C-PsS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tVs-p6-a1y"/>
+                <constraint firstAttribute="trailing" secondItem="L4a-5C-PsS" secondAttribute="trailing" id="ylk-23-g0C"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="7GO-d2-4si"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="176.5" y="153.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pushguidebg" width="400" height="200"/>
+        <image name="pushguidebot" width="130" height="90"/>
+        <image name="pushguidemid" width="240" height="125"/>
+        <image name="pushguidetop" width="250" height="55"/>
+    </resources>
+</document>

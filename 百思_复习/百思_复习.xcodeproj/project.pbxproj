@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A0FED531D4068BE00E69253 /* YFRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0FED511D4068BE00E69253 /* YFRecommendViewController.xib */; };
+		5A0FED561D406DBC00E69253 /* YFCommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FED551D406DBC00E69253 /* YFCommend.m */; };
+		5A0FED5A1D406EF300E69253 /* YFRecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FED581D406EF300E69253 /* YFRecommendCell.m */; };
+		5A0FED5B1D406EF300E69253 /* YFRecommendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0FED591D406EF300E69253 /* YFRecommendCell.xib */; };
+		5A0FED5E1D407F9B00E69253 /* UIImage+YFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FED5D1D407F9B00E69253 /* UIImage+YFExtension.m */; };
+		5A0FED641D409B7F00E69253 /* YFSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FED631D409B7F00E69253 /* YFSearchField.m */; };
+		5A0FED661D409BB100E69253 /* YFRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FED651D409BB100E69253 /* YFRecommendViewController.m */; };
+		5A0FED691D40C8FF00E69253 /* YFPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FED681D40C8FF00E69253 /* YFPushGuideView.m */; };
+		5A0FED6B1D40C91600E69253 /* YFPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A0FED6A1D40C91600E69253 /* YFPushGuideView.xib */; };
 		5A2C013B1D39EC1C00501045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2C013A1D39EC1C00501045 /* Assets.xcassets */; };
 		5A2C013E1D39EC1C00501045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2C013C1D39EC1C00501045 /* LaunchScreen.storyboard */; };
 		5A2C01491D39EC1C00501045 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01481D39EC1C00501045 /* _____Tests.m */; };
@@ -70,6 +79,21 @@
 
 /* Begin PBXFileReference section */
 		09194016C6EEDB978B32723A /* libPods-百思_复习.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思_复习.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0FED4F1D4068BE00E69253 /* YFRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRecommendViewController.h; sourceTree = "<group>"; };
+		5A0FED511D4068BE00E69253 /* YFRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFRecommendViewController.xib; sourceTree = "<group>"; };
+		5A0FED541D406DBC00E69253 /* YFCommend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFCommend.h; sourceTree = "<group>"; };
+		5A0FED551D406DBC00E69253 /* YFCommend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFCommend.m; sourceTree = "<group>"; };
+		5A0FED571D406EF300E69253 /* YFRecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRecommendCell.h; sourceTree = "<group>"; };
+		5A0FED581D406EF300E69253 /* YFRecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRecommendCell.m; sourceTree = "<group>"; };
+		5A0FED591D406EF300E69253 /* YFRecommendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFRecommendCell.xib; sourceTree = "<group>"; };
+		5A0FED5C1D407F9B00E69253 /* UIImage+YFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YFExtension.h"; sourceTree = "<group>"; };
+		5A0FED5D1D407F9B00E69253 /* UIImage+YFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YFExtension.m"; sourceTree = "<group>"; };
+		5A0FED621D409B7F00E69253 /* YFSearchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFSearchField.h; sourceTree = "<group>"; };
+		5A0FED631D409B7F00E69253 /* YFSearchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFSearchField.m; sourceTree = "<group>"; };
+		5A0FED651D409BB100E69253 /* YFRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRecommendViewController.m; sourceTree = "<group>"; };
+		5A0FED671D40C8FF00E69253 /* YFPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFPushGuideView.h; sourceTree = "<group>"; };
+		5A0FED681D40C8FF00E69253 /* YFPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFPushGuideView.m; sourceTree = "<group>"; };
+		5A0FED6A1D40C91600E69253 /* YFPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFPushGuideView.xib; sourceTree = "<group>"; };
 		5A2C012B1D39EC1C00501045 /* 百思_复习.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思_复习.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2C013A1D39EC1C00501045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A2C013D1D39EC1C00501045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -324,6 +348,9 @@
 				5A2C01851D3A131B00501045 /* YFTabBarController.h */,
 				5A2C01861D3A131B00501045 /* YFTabBarController.m */,
 				5A2C01871D3A131B00501045 /* 分类 */,
+				5A0FED671D40C8FF00E69253 /* YFPushGuideView.h */,
+				5A0FED681D40C8FF00E69253 /* YFPushGuideView.m */,
+				5A0FED6A1D40C91600E69253 /* YFPushGuideView.xib */,
 			);
 			path = "其他-other";
 			sourceTree = "<group>";
@@ -335,6 +362,8 @@
 				5A2C01891D3A131B00501045 /* UIView+YFExension.m */,
 				5A4BFC3B1D3E2F0B001BBA90 /* YFConst.h */,
 				5A4BFC3C1D3E2F0B001BBA90 /* YFConst.m */,
+				5A0FED5C1D407F9B00E69253 /* UIImage+YFExtension.h */,
+				5A0FED5D1D407F9B00E69253 /* UIImage+YFExtension.m */,
 			);
 			path = "分类";
 			sourceTree = "<group>";
@@ -421,6 +450,9 @@
 				5A52916F1D3F25840030D82C /* YFShowPictureViewController.h */,
 				5A5291701D3F25840030D82C /* YFShowPictureViewController.m */,
 				5A5291711D3F25840030D82C /* YFShowPictureViewController.xib */,
+				5A0FED4F1D4068BE00E69253 /* YFRecommendViewController.h */,
+				5A0FED651D409BB100E69253 /* YFRecommendViewController.m */,
+				5A0FED511D4068BE00E69253 /* YFRecommendViewController.xib */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -430,6 +462,8 @@
 			children = (
 				5A4BFC2E1D3DE36F001BBA90 /* YFTopics.h */,
 				5A4BFC2F1D3DE36F001BBA90 /* YFTopics.m */,
+				5A0FED541D406DBC00E69253 /* YFCommend.h */,
+				5A0FED551D406DBC00E69253 /* YFCommend.m */,
 			);
 			path = mode;
 			sourceTree = "<group>";
@@ -451,6 +485,11 @@
 				5A5291671D3F1AB10030D82C /* YFVoiceCell.h */,
 				5A5291681D3F1AB10030D82C /* YFVoiceCell.m */,
 				5A5291691D3F1AB10030D82C /* YFVoiceCell.xib */,
+				5A0FED571D406EF300E69253 /* YFRecommendCell.h */,
+				5A0FED581D406EF300E69253 /* YFRecommendCell.m */,
+				5A0FED591D406EF300E69253 /* YFRecommendCell.xib */,
+				5A0FED621D409B7F00E69253 /* YFSearchField.h */,
+				5A0FED631D409B7F00E69253 /* YFSearchField.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -571,9 +610,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A52916B1D3F1AB10030D82C /* YFVoiceCell.xib in Resources */,
+				5A0FED5B1D406EF300E69253 /* YFRecommendCell.xib in Resources */,
 				5A2C013E1D39EC1C00501045 /* LaunchScreen.storyboard in Resources */,
 				5A2C01A21D3A15C300501045 /* YFRecommendFriendController.xib in Resources */,
+				5A0FED6B1D40C91600E69253 /* YFPushGuideView.xib in Resources */,
 				5A4BFC3A1D3E2A4C001BBA90 /* YFPictureCell.xib in Resources */,
+				5A0FED531D4068BE00E69253 /* YFRecommendViewController.xib in Resources */,
 				5A2C01AD1D3A22D300501045 /* YFUserCell.xib in Resources */,
 				5A5291661D3F12E30030D82C /* YFVideoCell.xib in Resources */,
 				5AC936FC1D3C89C600F9237D /* YFLoginViewController.xib in Resources */,
@@ -661,21 +703,27 @@
 				5A2C019A1D3A131B00501045 /* YFNavController.m in Sources */,
 				5A2C01A51D3A1E8E00501045 /* YFCategory.m in Sources */,
 				5A2C01AC1D3A22D300501045 /* YFUserCell.m in Sources */,
+				5A0FED5E1D407F9B00E69253 /* UIImage+YFExtension.m in Sources */,
 				5A5291651D3F12E30030D82C /* YFVideoCell.m in Sources */,
 				5A2C01961D3A131B00501045 /* YFFriendController.m in Sources */,
 				5A61B5F91D3D2965009ABB91 /* YFEssenceViewController.m in Sources */,
 				5A4BFC2D1D3DC714001BBA90 /* YFTopicsViewController.m in Sources */,
+				5A0FED5A1D406EF300E69253 /* YFRecommendCell.m in Sources */,
 				5A2C019D1D3A131B00501045 /* UIView+YFExension.m in Sources */,
+				5A0FED661D409BB100E69253 /* YFRecommendViewController.m in Sources */,
 				5A4BFC391D3E2A4C001BBA90 /* YFPictureCell.m in Sources */,
 				5A4BFC301D3DE36F001BBA90 /* YFTopics.m in Sources */,
 				5A52916A1D3F1AB10030D82C /* YFVoiceCell.m in Sources */,
 				5A2C019B1D3A131B00501045 /* YFTabBar.m in Sources */,
+				5A0FED691D40C8FF00E69253 /* YFPushGuideView.m in Sources */,
 				5A4BFC3D1D3E2F0B001BBA90 /* YFConst.m in Sources */,
 				5AC936FB1D3C89C600F9237D /* YFLoginViewController.m in Sources */,
 				5A2C01991D3A131B00501045 /* main.m in Sources */,
+				5A0FED561D406DBC00E69253 /* YFCommend.m in Sources */,
 				5AC936FF1D3C985400F9237D /* YFTextField.m in Sources */,
 				5A2C01A11D3A15C300501045 /* YFRecommendFriendController.m in Sources */,
 				5A4BFC341D3DEAE5001BBA90 /* YFTWordCell.m in Sources */,
+				5A0FED641D409B7F00E69253 /* YFSearchField.m in Sources */,
 				5A5291761D3F6F130030D82C /* YFShowTopViewController.m in Sources */,
 				5A2C01981D3A131B00501045 /* AppDelegate.m in Sources */,
 				5A444E251D3BECD800787F95 /* Foundation+Log.m in Sources */,
