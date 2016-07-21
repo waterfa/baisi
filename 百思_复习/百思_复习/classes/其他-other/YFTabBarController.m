@@ -11,6 +11,7 @@
 #import "YFTabBar.h"
 #import "YFFriendController.h"
 #import "YFEssenceViewController.h"
+#import "YFMeTableViewController.h"
 
 @implementation YFTabBarController
 
@@ -32,7 +33,7 @@
     
     [self addNavWithVC:[[YFFriendController alloc]init] title:@"关注" image:@"tabBar_friendTrends_icon" selectImage:@"tabBar_friendTrends_click_icon"];
     
-    [self addNavWithVC:[[UIViewController alloc]init] title:@"我" image:@"tabBar_me_icon" selectImage:@"tabBar_me_click_icon"];
+    [self addNavWithVC:[[YFMeTableViewController alloc]initWithStyle:UITableViewStyleGrouped] title:@"我" image:@"tabBar_me_icon" selectImage:@"tabBar_me_click_icon"];
  
     
     //更换tabBar

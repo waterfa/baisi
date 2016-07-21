@@ -41,7 +41,7 @@
                         <state key="highlighted" backgroundImage="FollowBtnClickBg"/>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZN-6D-cFD">
-                        <rect key="frame" x="0.0" y="67.5" width="313" height="3"/>
+                        <rect key="frame" x="0.0" y="67" width="313" height="3"/>
                         <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="3" id="ix9-tr-0Va"/>
