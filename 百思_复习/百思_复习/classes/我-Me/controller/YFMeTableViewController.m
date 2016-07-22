@@ -10,17 +10,32 @@
 #import "YFFootView.h"
 
 @interface YFMeTableViewController ()
+/** height */
+@property(nonatomic,strong)NSMutableArray *heights;
+/** sss */
+@property(nonatomic,assign)CGFloat height;
 
 @end
 
 @implementation YFMeTableViewController
+-(NSMutableArray *)heights
+{
+    if(!_heights)
+    {
+        _heights = [NSMutableArray array];
+        
+    }
+    return _heights;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.navigationItem.title = @"我的";
-//    self.automaticallyAdjustsScrollViewInsets = NO;
-//    self.tableView.contentInset = UIEdgeInsetsMake(44, 0, 0, 44);
+    self.tableView.sectionFooterHeight = 0;
+    self.tableView.sectionHeaderHeight = YFTopicMargin;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.tableView.contentInset = UIEdgeInsetsMake(64-35+YFTopicMargin, 0, 44+10-35 +10, 0);
     
     //右边按钮
     
@@ -48,6 +63,14 @@
 //    self.tableView.tableFooterView = [[YFFootView alloc]init];
 //    self.tableView.height = 1000;
     
+    //接收通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(run:) name:@"fuck" object:nil];
+    
+}
+-(void)run:(NSNotification *)note
+{
+    self.height = [note.userInfo[@"height"] doubleValue];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:2] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 -(void)setting
@@ -77,15 +100,12 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" ];
-    if(indexPath.section == 2){
-        return [[YFFootView alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-    }
+    
+    YFFootView *cell  = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+
     if(cell == nil){
         
-        
-        cell = [[UITableViewCell  alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-       
+        cell = [[YFFootView  alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     
     if(indexPath.section == 0){
@@ -96,8 +116,12 @@
     {
         cell.textLabel.text = @"离线下载";
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }else if(indexPath.section == 2){
+        
+        cell.footView = YES;
+        
+        
     }
-    
     
     return cell;
 }
@@ -105,12 +129,10 @@
 #pragma mark - UITableViewDelegate
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.section == 2){
-        
-        YFFootView *cell = [tableView cellForRowAtIndexPath:indexPath];
-        NSLog(@"cell = %f",cell.maxheight);
-        return cell.maxheight;
-    }else return 70;
+    if(indexPath.section == 2) return self.height;
+    else return 44;
+
+    
     
 }
 

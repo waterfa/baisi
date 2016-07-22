@@ -22,12 +22,13 @@
 
 
 @implementation YFFootView
+static BOOL add = YES;
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
    if(self =  [super initWithStyle:style reuseIdentifier:reuseIdentifier])
    {
-       [self setup];
+       ;
    }
     
     return self;
@@ -35,7 +36,7 @@
 
 -(void)setup
 {
-    
+    self.backgroundColor = [UIColor clearColor];
     [self setupRequest];
     
 }
@@ -60,6 +61,7 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"加载失败");
     }];
+    
     
     
 }
@@ -91,15 +93,44 @@
         
         [self addSubview:btn];
         
+//        btn.hidden = YES;
+        
         
         if(i == count - 1){
+//            btn.hidden = NO;
             self.maxheight = CGRectGetMaxY(btn.frame) + 10;
             
-            NSLog(@" btn = %f",self.maxheight);
         }
     }
 }
 
+-(void)setMaxheight:(CGFloat)maxheight
+{
+    _maxheight = maxheight;
+    
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    dict[@"height"] = @(maxheight);
+    
+    if(add){
+    //发送通知
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"fuck" object:nil userInfo:dict];
+        add = NO;
+    }
+}
 
 
+-(void)setFootView:(BOOL)footView
+{
+    _footView = footView;
+    
+    
+    
+    [self setup];
+}
+
+
+-(void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+}
 @end

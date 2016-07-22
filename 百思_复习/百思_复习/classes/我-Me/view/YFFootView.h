@@ -11,4 +11,9 @@
 @interface YFFootView : UITableViewCell
 /** 高度 */
 @property(nonatomic,assign)CGFloat  maxheight;
+/** block */
+@property(nonatomic,strong) void (^ablock)();
+/** footView */
+@property(nonatomic,assign)BOOL  footView;
+
 @end
