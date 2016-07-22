@@ -12,8 +12,13 @@
 #import "YFPictureCell.h"
 #import "YFVideoCell.h"
 #import "YFVoiceCell.h"
+#import "YFComment.h"
+#import "YFCommentUser.h"
 
 @interface YFTWordCell ()
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *commentViewH;
+@property (weak, nonatomic) IBOutlet UILabel *commentLabel;
+@property (weak, nonatomic) IBOutlet UIView *commentView;
 @property (weak, nonatomic) IBOutlet UIImageView *profile_image;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *create_time;
@@ -64,6 +69,11 @@
     return _video;
 }
 - (void)awakeFromNib {
+    
+//    self.autoresizesSubviews = NO;
+//    self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+//    self.autoContentAccessingProxy
+    self.width = [UIScreen mainScreen].bounds.size.width;
 }
 
 -(void)setTopic:(YFTopics *)topic
@@ -115,6 +125,18 @@
         self.voice.hidden = YES;
         self.video.hidden = YES;
         self.picture.hidden = YES;
+    }
+    
+    if(topic.top_cmt.count){
+        self.commentView.hidden = NO;
+        YFComment *comment = topic.top_cmt[0];
+        self.commentViewH.constant = topic.commentViewH;
+        self.commentLabel.text = [NSString stringWithFormat:@"%@ : %@",comment.user.username,comment.content ];
+        
+    }else
+    {
+        self.commentView.hidden = YES;
+        
     }
     
 }

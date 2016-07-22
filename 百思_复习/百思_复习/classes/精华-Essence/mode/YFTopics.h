@@ -46,6 +46,9 @@
 /** 图片（小） */
 @property(nonatomic,strong)NSString *image0;
 
+//最热评论数组
+@property(nonatomic,strong)NSArray *top_cmt;
+
 
 //额外辅助属性
 /** cell的高度 */
@@ -55,5 +58,7 @@
 @property(nonatomic,assign)CGRect pictureF;
 /** 是否是大图片 */
 @property(nonatomic,assign)BOOL BigPicture;
+/** 评论的高度 */
+@property(nonatomic,assign)CGFloat commentViewH;
 
 @end

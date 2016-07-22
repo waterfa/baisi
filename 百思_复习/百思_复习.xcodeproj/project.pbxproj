@@ -42,6 +42,8 @@
 		5A444E221D3BA6F000787F95 /* YFCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A444E201D3BA6F000787F95 /* YFCategoryCell.m */; };
 		5A444E231D3BA6F000787F95 /* YFCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A444E211D3BA6F000787F95 /* YFCategoryCell.xib */; };
 		5A444E251D3BECD800787F95 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A444E241D3BECD800787F95 /* Foundation+Log.m */; };
+		5A464A251D41BEBD004C31B4 /* YFComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A464A241D41BEBD004C31B4 /* YFComment.m */; };
+		5A464A2B1D41C781004C31B4 /* YFCommentUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A464A2A1D41C781004C31B4 /* YFCommentUser.m */; };
 		5A4BFC2D1D3DC714001BBA90 /* YFTopicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4BFC2C1D3DC714001BBA90 /* YFTopicsViewController.m */; };
 		5A4BFC301D3DE36F001BBA90 /* YFTopics.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4BFC2F1D3DE36F001BBA90 /* YFTopics.m */; };
 		5A4BFC341D3DEAE5001BBA90 /* YFTWordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4BFC321D3DEAE5001BBA90 /* YFTWordCell.m */; };
@@ -147,6 +149,10 @@
 		5A444E201D3BA6F000787F95 /* YFCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFCategoryCell.m; sourceTree = "<group>"; };
 		5A444E211D3BA6F000787F95 /* YFCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFCategoryCell.xib; sourceTree = "<group>"; };
 		5A444E241D3BECD800787F95 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		5A464A231D41BEBD004C31B4 /* YFComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFComment.h; sourceTree = "<group>"; };
+		5A464A241D41BEBD004C31B4 /* YFComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFComment.m; sourceTree = "<group>"; };
+		5A464A291D41C781004C31B4 /* YFCommentUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFCommentUser.h; sourceTree = "<group>"; };
+		5A464A2A1D41C781004C31B4 /* YFCommentUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFCommentUser.m; sourceTree = "<group>"; };
 		5A4BFC2B1D3DC714001BBA90 /* YFTopicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFTopicsViewController.h; sourceTree = "<group>"; };
 		5A4BFC2C1D3DC714001BBA90 /* YFTopicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFTopicsViewController.m; sourceTree = "<group>"; };
 		5A4BFC2E1D3DE36F001BBA90 /* YFTopics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFTopics.h; sourceTree = "<group>"; };
@@ -487,6 +493,10 @@
 				5A4BFC2F1D3DE36F001BBA90 /* YFTopics.m */,
 				5A0FED541D406DBC00E69253 /* YFCommend.h */,
 				5A0FED551D406DBC00E69253 /* YFCommend.m */,
+				5A464A231D41BEBD004C31B4 /* YFComment.h */,
+				5A464A241D41BEBD004C31B4 /* YFComment.m */,
+				5A464A291D41C781004C31B4 /* YFCommentUser.h */,
+				5A464A2A1D41C781004C31B4 /* YFCommentUser.m */,
 			);
 			path = mode;
 			sourceTree = "<group>";
@@ -736,12 +746,14 @@
 				5A2C019D1D3A131B00501045 /* UIView+YFExension.m in Sources */,
 				5A0FED661D409BB100E69253 /* YFRecommendViewController.m in Sources */,
 				5A4BFC391D3E2A4C001BBA90 /* YFPictureCell.m in Sources */,
+				5A464A2B1D41C781004C31B4 /* YFCommentUser.m in Sources */,
 				5A4BFC301D3DE36F001BBA90 /* YFTopics.m in Sources */,
 				5A52916A1D3F1AB10030D82C /* YFVoiceCell.m in Sources */,
 				5A2C019B1D3A131B00501045 /* YFTabBar.m in Sources */,
 				5A0FED7E1D40F18B00E69253 /* YFFootBtn.m in Sources */,
 				5A0FED691D40C8FF00E69253 /* YFPushGuideView.m in Sources */,
 				5A4BFC3D1D3E2F0B001BBA90 /* YFConst.m in Sources */,
+				5A464A251D41BEBD004C31B4 /* YFComment.m in Sources */,
 				5AC936FB1D3C89C600F9237D /* YFLoginViewController.m in Sources */,
 				5A0FED7B1D40EF0600E69253 /* YFMeBtnMode.m in Sources */,
 				5A2C01991D3A131B00501045 /* main.m in Sources */,

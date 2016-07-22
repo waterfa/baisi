@@ -4,7 +4,7 @@
 //
 //  Created by 钟永发 on 16/7/21.
 //  Copyright © 2016年 facker. All rights reserved.
-//
+// 推荐标签模型
 
 #import <Foundation/Foundation.h>
 

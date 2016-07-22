@@ -7,6 +7,9 @@
 //
 
 #import "YFTopics.h"
+#import <MJExtension.h>
+#import "YFComment.h"
+#import "YFCommentUser.h"
 
 @implementation YFTopics
 
@@ -36,8 +39,32 @@
         }
         
         
+        if(self.top_cmt.count){
+            
+            CGFloat topcomment = 20;
+            YFComment *comment = self.top_cmt[0];
+            CGFloat contentH = [[NSString stringWithFormat:@"%@ : %@",comment.user.username,comment.content ] boundingRectWithSize:CGSizeMake(YFScreenW - YFTopicMargin *2, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:17] }context:nil].size.height;
+            _commentViewH = topcomment + YFTopicMargin + contentH + 10;
+            
+            
+            
+            _cellHeight += _commentViewH + YFTopicMargin;
+        }
+        
+        
         _cellHeight += 35+YFTopicMargin ;
     }
     return _cellHeight;
 }
+
+-(void)setTop_cmt:(NSArray *)top_cmt
+{
+    _top_cmt = [YFComment mj_objectArrayWithKeyValuesArray:top_cmt];
+    
+}
+
+//-(NSMutableDictionary *)mj_keyValuesWithKeys:(NSArray *)keys
+//{
+//    return
+//}
 @end
