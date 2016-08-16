@@ -133,4 +133,10 @@ static BOOL add = YES;
 {
     [super setFrame:frame];
 }
+
+-(void)dealloc
+{
+    [[AFHTTPSessionManager manager].operationQueue cancelAllOperations];
+
+}
 @end

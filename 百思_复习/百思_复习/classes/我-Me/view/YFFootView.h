@@ -16,4 +16,5 @@
 /** footView */
 @property(nonatomic,assign)BOOL  footView;
 
+-(void)setup;
 @end

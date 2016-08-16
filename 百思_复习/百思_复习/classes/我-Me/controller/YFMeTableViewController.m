@@ -67,6 +67,12 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(run:) name:@"fuck" object:nil];
     
 }
+
+-(void)dealloc
+{
+    //取消监听
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 -(void)run:(NSNotification *)note
 {
     self.height = [note.userInfo[@"height"] doubleValue];
@@ -118,7 +124,7 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }else if(indexPath.section == 2){
         
-        cell.footView = YES;
+        [cell setup];
         
         
     }

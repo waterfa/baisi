@@ -39,6 +39,10 @@
 
 @end
 @implementation YFTWordCell
++(instancetype)word
+{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil]lastObject];
+}
 -(YFVoiceCell *)voice
 {
     if(!_voice)

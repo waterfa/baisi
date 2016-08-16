@@ -48,6 +48,11 @@
 
 //最热评论数组
 @property(nonatomic,strong)NSArray *top_cmt;
+/** 视频url */
+@property(nonatomic,strong)NSString *videouri;
+
+/** 帖子的id */
+@property(nonatomic,strong)NSString *id;
 
 
 //额外辅助属性

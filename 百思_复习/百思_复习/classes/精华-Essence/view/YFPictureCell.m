@@ -54,33 +54,44 @@
     _topic = topic;
     
     //加载图片
-    [self.mainImageView sd_setImageWithURL:[NSURL URLWithString:topic.image2] placeholderImage:nil options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-        
-//        CGFloat progress = (receivedSize * 1.0 )/(expectedSize * 1.0);
-//        [self.progressView setProgress:progress animated:YES];
-        
-    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        
-//        self.progressView.hidden = YES;
-        
-        if(topic.BigPicture){
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self.mainImageView sd_setImageWithURL:[NSURL URLWithString:topic.image2] placeholderImage:nil options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+            
+            //        CGFloat progress = (receivedSize * 1.0 )/(expectedSize * 1.0);
+            //        [self.progressView setProgress:progress animated:YES];
+            
+        } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
             
             
-            CGSize size = topic.pictureF.size;
-            UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
-            CGFloat w = size.width;
-            CGFloat h = w * topic.height/ topic.width;
-            [image drawInRect:CGRectMake(0, 0, w, h)];
+            //回到主线程
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                //        self.progressView.hidden = YES;
+                
+                if(topic.BigPicture){
+                    
+                    
+                    CGSize size = topic.pictureF.size;
+                    UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
+                    CGFloat w = size.width;
+                    CGFloat h = w * topic.height/ topic.width;
+                    [image drawInRect:CGRectMake(0, 0, w, h)];
+                    
+                   UIImage *image2 = UIGraphicsGetImageFromCurrentImageContext();
+                    
+                    UIGraphicsEndImageContext();
+                    
+                    self.mainImageView.image =  image2;
+                    
+                }
+            }];
             
-            image = UIGraphicsGetImageFromCurrentImageContext();
             
-            UIGraphicsEndImageContext();
-            
-            self.mainImageView.image = image;
-            
-            
-        }
-    }];
+                
+              
+        }];
+
+    });
+    
     
     self.seeBigBtn.hidden = !topic.BigPicture;
     NSString *str = [topic.image2 pathExtension];

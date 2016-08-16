@@ -13,6 +13,7 @@
 #import "YFTopics.h"
 #import "YFTWordCell.h"
 #import "YFEssenceViewController.h"
+#import "YFCommentController.h"
 
 @interface YFTopicsViewController ()
 /** 存放模型的数组 */
@@ -133,7 +134,13 @@ static NSString *const YFTopicID = @"topic";
     return topic.cellHeight;
 }
 
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    YFCommentController *vc = [[YFCommentController alloc]init];
+    vc.topic = self.topics[indexPath.row];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 
 @end

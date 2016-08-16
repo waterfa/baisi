@@ -21,6 +21,8 @@
 		5A0FED781D40ECB400E69253 /* YFFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FED771D40ECB400E69253 /* YFFootView.m */; };
 		5A0FED7B1D40EF0600E69253 /* YFMeBtnMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FED7A1D40EF0600E69253 /* YFMeBtnMode.m */; };
 		5A0FED7E1D40F18B00E69253 /* YFFootBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FED7D1D40F18B00E69253 /* YFFootBtn.m */; };
+		5A2BDC121D619A8800D13C9D /* YFCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2BDC101D619A8800D13C9D /* YFCommentController.m */; };
+		5A2BDC131D619A8800D13C9D /* YFCommentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2BDC111D619A8800D13C9D /* YFCommentController.xib */; };
 		5A2C013B1D39EC1C00501045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2C013A1D39EC1C00501045 /* Assets.xcassets */; };
 		5A2C013E1D39EC1C00501045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2C013C1D39EC1C00501045 /* LaunchScreen.storyboard */; };
 		5A2C01491D39EC1C00501045 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01481D39EC1C00501045 /* _____Tests.m */; };
@@ -110,6 +112,9 @@
 		5A0FED7A1D40EF0600E69253 /* YFMeBtnMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFMeBtnMode.m; sourceTree = "<group>"; };
 		5A0FED7C1D40F18B00E69253 /* YFFootBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFFootBtn.h; sourceTree = "<group>"; };
 		5A0FED7D1D40F18B00E69253 /* YFFootBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFFootBtn.m; sourceTree = "<group>"; };
+		5A2BDC0F1D619A8800D13C9D /* YFCommentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFCommentController.h; sourceTree = "<group>"; };
+		5A2BDC101D619A8800D13C9D /* YFCommentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFCommentController.m; sourceTree = "<group>"; };
+		5A2BDC111D619A8800D13C9D /* YFCommentController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFCommentController.xib; sourceTree = "<group>"; };
 		5A2C012B1D39EC1C00501045 /* 百思_复习.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思_复习.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2C013A1D39EC1C00501045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A2C013D1D39EC1C00501045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -482,6 +487,9 @@
 				5A0FED4F1D4068BE00E69253 /* YFRecommendViewController.h */,
 				5A0FED651D409BB100E69253 /* YFRecommendViewController.m */,
 				5A0FED511D4068BE00E69253 /* YFRecommendViewController.xib */,
+				5A2BDC0F1D619A8800D13C9D /* YFCommentController.h */,
+				5A2BDC101D619A8800D13C9D /* YFCommentController.m */,
+				5A2BDC111D619A8800D13C9D /* YFCommentController.xib */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -606,6 +614,7 @@
 				TargetAttributes = {
 					5A2C012A1D39EC1C00501045 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = LCNCL3237C;
 					};
 					5A2C01431D39EC1C00501045 = {
 						CreatedOnToolsVersion = 7.2;
@@ -653,6 +662,7 @@
 				5A2C01AD1D3A22D300501045 /* YFUserCell.xib in Resources */,
 				5A5291661D3F12E30030D82C /* YFVideoCell.xib in Resources */,
 				5AC936FC1D3C89C600F9237D /* YFLoginViewController.xib in Resources */,
+				5A2BDC131D619A8800D13C9D /* YFCommentController.xib in Resources */,
 				5A2C013B1D39EC1C00501045 /* Assets.xcassets in Resources */,
 				5A444E231D3BA6F000787F95 /* YFCategoryCell.xib in Resources */,
 				5A2C01971D3A131B00501045 /* YFFriendController.xib in Resources */,
@@ -768,6 +778,7 @@
 				5A2C01981D3A131B00501045 /* AppDelegate.m in Sources */,
 				5A444E251D3BECD800787F95 /* Foundation+Log.m in Sources */,
 				5A2C019C1D3A131B00501045 /* YFTabBarController.m in Sources */,
+				5A2BDC121D619A8800D13C9D /* YFCommentController.m in Sources */,
 				5A2C01A81D3A223E00501045 /* YFUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -903,11 +914,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "百思_复习/classes/其他-other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思_复习/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.baidu.-----";
+				PRODUCT_BUNDLE_IDENTIFIER = "-64947957-qq.com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -918,11 +931,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "百思_复习/classes/其他-other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思_复习/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.baidu.-----";
+				PRODUCT_BUNDLE_IDENTIFIER = "-64947957-qq.com";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
