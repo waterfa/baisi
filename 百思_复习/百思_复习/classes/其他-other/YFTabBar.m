@@ -7,6 +7,7 @@
 //
 
 #import "YFTabBar.h"
+#import "XMGPublishViewController.h"
 
 @interface YFTabBar ()
 
@@ -72,5 +73,10 @@
 -(void)publishBtnClick
 {
     NSLog(@"点击了发布按钮");
+    
+    XMGPublishViewController *vc = [[XMGPublishViewController alloc]init];
+    
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vc animated:YES completion:nil];
+    
 }
 @end

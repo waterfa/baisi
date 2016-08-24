@@ -25,6 +25,9 @@
 #define YFEssenceContentViewY (64+(YFEssenceTitleViewH))
 #define YFTabBarH 44
 #define YFTopicMargin 10
+#define YFTagMargin 5
+#define YFTagColor YFColor(74, 139, 209)
+#define YFTagH 25
 
 
 #endif /* PrefixHeader_pch */

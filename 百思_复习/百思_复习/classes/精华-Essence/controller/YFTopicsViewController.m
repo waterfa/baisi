@@ -138,6 +138,7 @@ static NSString *const YFTopicID = @"topic";
 {
     YFCommentController *vc = [[YFCommentController alloc]init];
     vc.topic = self.topics[indexPath.row];
+//    vc.cell = [tableView cellForRowAtIndexPath:indexPath];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }

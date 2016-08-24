@@ -7,10 +7,9 @@
 // 评论模型
 
 #import <Foundation/Foundation.h>
-@class YFCommentUser;
+#import "YFCommentUser.h"
 @interface YFComment : NSObject
-/** 名字 */
-//@property(nonatomic,strong)NS *<#name#>
+
 
 /** 内容 */
 @property(nonatomic,strong)NSString *content;
@@ -19,4 +18,10 @@
 
 /** 用户 */
 @property(nonatomic,strong)YFCommentUser *user;
+/** 音频文件的路经 */
+@property(nonatomic,copy)NSString *voiceuri;
+/** 音频文件的时长 */
+@property(nonatomic,assign)NSInteger voicetime;
+/** 评论的id */
+@property(nonatomic,copy)NSString *ID;
 @end

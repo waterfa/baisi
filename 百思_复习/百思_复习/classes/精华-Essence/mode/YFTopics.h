@@ -52,7 +52,7 @@
 @property(nonatomic,strong)NSString *videouri;
 
 /** 帖子的id */
-@property(nonatomic,strong)NSString *id;
+@property(nonatomic,strong)NSString *ID;
 
 
 //额外辅助属性

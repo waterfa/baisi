@@ -17,7 +17,11 @@
     
     self.imageView.frame = CGRectMake(0, 0, self.width, self.width);
     
-    self.titleLabel.frame = CGRectMake(0, self.width+10, self.width, self.height - self.width-10);
+    
+    
+    
+    self.titleLabel.frame = CGRectMake(0, self.width+5, self.width, self.height - self.width-5);
+    self.titleLabel.textAlignment = NSTextAlignmentCenter;
     
 }
 

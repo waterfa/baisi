@@ -17,4 +17,5 @@
 @property(nonatomic,strong)NSString *username;
 /** 是否会员 */
 @property(nonatomic,strong)NSString *is_vip;
+
 @end

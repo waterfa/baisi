@@ -325,7 +325,7 @@
         </view>
     </objects>
     <resources>
-        <image name="loginBtnBg" width="10" height="10"/>
+        <image name="loginBtnBg" width="55" height="45"/>
         <image name="login_QQ_icon" width="70" height="70"/>
         <image name="login_close_icon" width="16" height="16"/>
         <image name="login_register_background" width="320" height="568"/>

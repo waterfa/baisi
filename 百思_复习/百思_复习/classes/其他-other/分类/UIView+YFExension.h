@@ -19,4 +19,5 @@
 @property(nonatomic,assign)CGFloat centerY;
 
 -(BOOL)isShowOnWindow;
++(instancetype)viewFromXib;
 @end

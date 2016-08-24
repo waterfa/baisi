@@ -33,7 +33,9 @@
                     <state key="normal" title="立即登录/注册" backgroundImage="friendsTrend_login">
                         <color key="titleColor" red="1" green="0.14687089040000001" blue="0.16155180320000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
-                    <state key="highlighted" backgroundImage="friendsTrend_login_click"/>
+                    <state key="highlighted" backgroundImage="friendsTrend_login_click">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="loginBtn:" destination="-1" eventType="touchUpInside" id="qcn-iz-MBz"/>
                     </connections>
@@ -59,7 +61,7 @@
     </objects>
     <resources>
         <image name="friendsTrend_login" width="243" height="48"/>
-        <image name="friendsTrend_login_click" width="243" height="48"/>
+        <image name="friendsTrend_login_click" width="7" height="48"/>
         <image name="header_cry_icon" width="48" height="48"/>
     </resources>
 </document>

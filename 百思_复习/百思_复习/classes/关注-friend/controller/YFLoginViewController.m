@@ -25,6 +25,12 @@
     [super viewDidLoad];
 
     
+    //登录按钮圆角
+    UIImage *image =[UIImage imageNamed:@"loginBtnBg"];
+    CGSize size = image.size;
+    
+    image = [image stretchableImageWithLeftCapWidth:size.width * 0.5 topCapHeight:size.height *0.5];
+    [self.loginBtn setBackgroundImage:image forState:UIControlStateNormal];
     
     
     //设置头像圆角

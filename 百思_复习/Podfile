@@ -7,6 +7,8 @@ pod "MJExtension"
 pod "SDWebImage"
 pod "DACircularProgress"
 pod "Masonry"
+pod "SVProgressHUD"
+pod "pop"
 
 
 target "百思_复习"

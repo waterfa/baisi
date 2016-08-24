@@ -21,8 +21,19 @@
 		5A0FED781D40ECB400E69253 /* YFFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FED771D40ECB400E69253 /* YFFootView.m */; };
 		5A0FED7B1D40EF0600E69253 /* YFMeBtnMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FED7A1D40EF0600E69253 /* YFMeBtnMode.m */; };
 		5A0FED7E1D40F18B00E69253 /* YFFootBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FED7D1D40F18B00E69253 /* YFFootBtn.m */; };
+		5A2061DC1D6C1850003DDAD7 /* YFCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2061DA1D6C1850003DDAD7 /* YFCommentCell.m */; };
+		5A2061DD1D6C1850003DDAD7 /* YFCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2061DB1D6C1850003DDAD7 /* YFCommentCell.xib */; };
+		5A2061DF1D6C56D7003DDAD7 /* YFCommentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2061DE1D6C56D7003DDAD7 /* YFCommentController.xib */; };
+		5A2061F41D6C7A6F003DDAD7 /* XMGAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2061E31D6C7A6F003DDAD7 /* XMGAddTagViewController.m */; };
+		5A2061F51D6C7A6F003DDAD7 /* XMGPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2061E51D6C7A6F003DDAD7 /* XMGPostWordViewController.m */; };
+		5A2061F61D6C7A6F003DDAD7 /* XMGPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2061E71D6C7A6F003DDAD7 /* XMGPublishViewController.m */; };
+		5A2061F71D6C7A6F003DDAD7 /* XMGPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2061E81D6C7A6F003DDAD7 /* XMGPublishViewController.xib */; };
+		5A2061F81D6C7A6F003DDAD7 /* XMGAddTagToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2061EC1D6C7A6F003DDAD7 /* XMGAddTagToolbar.m */; };
+		5A2061F91D6C7A6F003DDAD7 /* XMGAddTagToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2061ED1D6C7A6F003DDAD7 /* XMGAddTagToolbar.xib */; };
+		5A2061FA1D6C7A6F003DDAD7 /* XMGPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2061EF1D6C7A6F003DDAD7 /* XMGPlaceholderTextView.m */; };
+		5A2061FB1D6C7A6F003DDAD7 /* XMGTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2061F11D6C7A6F003DDAD7 /* XMGTagButton.m */; };
+		5A2061FC1D6C7A6F003DDAD7 /* XMGTagTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2061F31D6C7A6F003DDAD7 /* XMGTagTextField.m */; };
 		5A2BDC121D619A8800D13C9D /* YFCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2BDC101D619A8800D13C9D /* YFCommentController.m */; };
-		5A2BDC131D619A8800D13C9D /* YFCommentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2BDC111D619A8800D13C9D /* YFCommentController.xib */; };
 		5A2C013B1D39EC1C00501045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2C013A1D39EC1C00501045 /* Assets.xcassets */; };
 		5A2C013E1D39EC1C00501045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2C013C1D39EC1C00501045 /* LaunchScreen.storyboard */; };
 		5A2C01491D39EC1C00501045 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2C01481D39EC1C00501045 /* _____Tests.m */; };
@@ -112,9 +123,28 @@
 		5A0FED7A1D40EF0600E69253 /* YFMeBtnMode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFMeBtnMode.m; sourceTree = "<group>"; };
 		5A0FED7C1D40F18B00E69253 /* YFFootBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFFootBtn.h; sourceTree = "<group>"; };
 		5A0FED7D1D40F18B00E69253 /* YFFootBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFFootBtn.m; sourceTree = "<group>"; };
+		5A2061D91D6C1850003DDAD7 /* YFCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFCommentCell.h; sourceTree = "<group>"; };
+		5A2061DA1D6C1850003DDAD7 /* YFCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFCommentCell.m; sourceTree = "<group>"; };
+		5A2061DB1D6C1850003DDAD7 /* YFCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFCommentCell.xib; sourceTree = "<group>"; };
+		5A2061DE1D6C56D7003DDAD7 /* YFCommentController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFCommentController.xib; sourceTree = "<group>"; };
+		5A2061E21D6C7A6F003DDAD7 /* XMGAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGAddTagViewController.h; sourceTree = "<group>"; };
+		5A2061E31D6C7A6F003DDAD7 /* XMGAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGAddTagViewController.m; sourceTree = "<group>"; };
+		5A2061E41D6C7A6F003DDAD7 /* XMGPostWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostWordViewController.h; sourceTree = "<group>"; };
+		5A2061E51D6C7A6F003DDAD7 /* XMGPostWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostWordViewController.m; sourceTree = "<group>"; };
+		5A2061E61D6C7A6F003DDAD7 /* XMGPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPublishViewController.h; sourceTree = "<group>"; };
+		5A2061E71D6C7A6F003DDAD7 /* XMGPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPublishViewController.m; sourceTree = "<group>"; };
+		5A2061E81D6C7A6F003DDAD7 /* XMGPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGPublishViewController.xib; sourceTree = "<group>"; };
+		5A2061EB1D6C7A6F003DDAD7 /* XMGAddTagToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGAddTagToolbar.h; sourceTree = "<group>"; };
+		5A2061EC1D6C7A6F003DDAD7 /* XMGAddTagToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGAddTagToolbar.m; sourceTree = "<group>"; };
+		5A2061ED1D6C7A6F003DDAD7 /* XMGAddTagToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGAddTagToolbar.xib; sourceTree = "<group>"; };
+		5A2061EE1D6C7A6F003DDAD7 /* XMGPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPlaceholderTextView.h; sourceTree = "<group>"; };
+		5A2061EF1D6C7A6F003DDAD7 /* XMGPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPlaceholderTextView.m; sourceTree = "<group>"; };
+		5A2061F01D6C7A6F003DDAD7 /* XMGTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTagButton.h; sourceTree = "<group>"; };
+		5A2061F11D6C7A6F003DDAD7 /* XMGTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTagButton.m; sourceTree = "<group>"; };
+		5A2061F21D6C7A6F003DDAD7 /* XMGTagTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGTagTextField.h; sourceTree = "<group>"; };
+		5A2061F31D6C7A6F003DDAD7 /* XMGTagTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGTagTextField.m; sourceTree = "<group>"; };
 		5A2BDC0F1D619A8800D13C9D /* YFCommentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFCommentController.h; sourceTree = "<group>"; };
 		5A2BDC101D619A8800D13C9D /* YFCommentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFCommentController.m; sourceTree = "<group>"; };
-		5A2BDC111D619A8800D13C9D /* YFCommentController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFCommentController.xib; sourceTree = "<group>"; };
 		5A2C012B1D39EC1C00501045 /* 百思_复习.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思_复习.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2C013A1D39EC1C00501045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A2C013D1D39EC1C00501045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -231,6 +261,53 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5A2061E01D6C7A44003DDAD7 /* publish */ = {
+			isa = PBXGroup;
+			children = (
+				5A2061E11D6C7A6F003DDAD7 /* controller */,
+				5A2061E91D6C7A6F003DDAD7 /* mode */,
+				5A2061EA1D6C7A6F003DDAD7 /* view */,
+			);
+			name = publish;
+			sourceTree = "<group>";
+		};
+		5A2061E11D6C7A6F003DDAD7 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				5A2061E21D6C7A6F003DDAD7 /* XMGAddTagViewController.h */,
+				5A2061E31D6C7A6F003DDAD7 /* XMGAddTagViewController.m */,
+				5A2061E41D6C7A6F003DDAD7 /* XMGPostWordViewController.h */,
+				5A2061E51D6C7A6F003DDAD7 /* XMGPostWordViewController.m */,
+				5A2061E61D6C7A6F003DDAD7 /* XMGPublishViewController.h */,
+				5A2061E71D6C7A6F003DDAD7 /* XMGPublishViewController.m */,
+				5A2061E81D6C7A6F003DDAD7 /* XMGPublishViewController.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		5A2061E91D6C7A6F003DDAD7 /* mode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = mode;
+			sourceTree = "<group>";
+		};
+		5A2061EA1D6C7A6F003DDAD7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5A2061EB1D6C7A6F003DDAD7 /* XMGAddTagToolbar.h */,
+				5A2061EC1D6C7A6F003DDAD7 /* XMGAddTagToolbar.m */,
+				5A2061ED1D6C7A6F003DDAD7 /* XMGAddTagToolbar.xib */,
+				5A2061EE1D6C7A6F003DDAD7 /* XMGPlaceholderTextView.h */,
+				5A2061EF1D6C7A6F003DDAD7 /* XMGPlaceholderTextView.m */,
+				5A2061F01D6C7A6F003DDAD7 /* XMGTagButton.h */,
+				5A2061F11D6C7A6F003DDAD7 /* XMGTagButton.m */,
+				5A2061F21D6C7A6F003DDAD7 /* XMGTagTextField.h */,
+				5A2061F31D6C7A6F003DDAD7 /* XMGTagTextField.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		5A2C01221D39EC1C00501045 = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +370,7 @@
 		5A2C01741D3A131B00501045 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				5A2061E01D6C7A44003DDAD7 /* publish */,
 				5A2C01751D3A131B00501045 /* 关注-friend */,
 				5A2C017C1D3A131B00501045 /* 其他-other */,
 				5A2C018A1D3A131B00501045 /* 我-Me */,
@@ -467,8 +545,8 @@
 		5A2C01921D3A131B00501045 /* 精华-Essence */ = {
 			isa = PBXGroup;
 			children = (
-				5A2C01931D3A131B00501045 /* controller */,
 				5A2C01941D3A131B00501045 /* mode */,
+				5A2C01931D3A131B00501045 /* controller */,
 				5A2C01951D3A131B00501045 /* view */,
 			);
 			path = "精华-Essence";
@@ -489,7 +567,7 @@
 				5A0FED511D4068BE00E69253 /* YFRecommendViewController.xib */,
 				5A2BDC0F1D619A8800D13C9D /* YFCommentController.h */,
 				5A2BDC101D619A8800D13C9D /* YFCommentController.m */,
-				5A2BDC111D619A8800D13C9D /* YFCommentController.xib */,
+				5A2061DE1D6C56D7003DDAD7 /* YFCommentController.xib */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -531,6 +609,9 @@
 				5A0FED591D406EF300E69253 /* YFRecommendCell.xib */,
 				5A0FED621D409B7F00E69253 /* YFSearchField.h */,
 				5A0FED631D409B7F00E69253 /* YFSearchField.m */,
+				5A2061D91D6C1850003DDAD7 /* YFCommentCell.h */,
+				5A2061DA1D6C1850003DDAD7 /* YFCommentCell.m */,
+				5A2061DB1D6C1850003DDAD7 /* YFCommentCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -652,19 +733,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A52916B1D3F1AB10030D82C /* YFVoiceCell.xib in Resources */,
+				5A2061F91D6C7A6F003DDAD7 /* XMGAddTagToolbar.xib in Resources */,
 				5A0FED5B1D406EF300E69253 /* YFRecommendCell.xib in Resources */,
+				5A2061F71D6C7A6F003DDAD7 /* XMGPublishViewController.xib in Resources */,
 				5A2C013E1D39EC1C00501045 /* LaunchScreen.storyboard in Resources */,
 				5A2C01A21D3A15C300501045 /* YFRecommendFriendController.xib in Resources */,
 				5A0FED751D40E59F00E69253 /* YFMeTableViewController.xib in Resources */,
 				5A0FED6B1D40C91600E69253 /* YFPushGuideView.xib in Resources */,
+				5A2061DD1D6C1850003DDAD7 /* YFCommentCell.xib in Resources */,
 				5A4BFC3A1D3E2A4C001BBA90 /* YFPictureCell.xib in Resources */,
 				5A0FED531D4068BE00E69253 /* YFRecommendViewController.xib in Resources */,
 				5A2C01AD1D3A22D300501045 /* YFUserCell.xib in Resources */,
 				5A5291661D3F12E30030D82C /* YFVideoCell.xib in Resources */,
 				5AC936FC1D3C89C600F9237D /* YFLoginViewController.xib in Resources */,
-				5A2BDC131D619A8800D13C9D /* YFCommentController.xib in Resources */,
 				5A2C013B1D39EC1C00501045 /* Assets.xcassets in Resources */,
 				5A444E231D3BA6F000787F95 /* YFCategoryCell.xib in Resources */,
+				5A2061DF1D6C56D7003DDAD7 /* YFCommentController.xib in Resources */,
 				5A2C01971D3A131B00501045 /* YFFriendController.xib in Resources */,
 				5A4BFC351D3DEAE5001BBA90 /* YFTWordCell.xib in Resources */,
 				5A5291731D3F25840030D82C /* YFShowPictureViewController.xib in Resources */,
@@ -742,26 +826,34 @@
 			files = (
 				5A444E221D3BA6F000787F95 /* YFCategoryCell.m in Sources */,
 				5A5291721D3F25840030D82C /* YFShowPictureViewController.m in Sources */,
+				5A2061F81D6C7A6F003DDAD7 /* XMGAddTagToolbar.m in Sources */,
 				5A4BFC401D3E814A001BBA90 /* YFProgressView.m in Sources */,
 				5AC937021D3CECD300F9237D /* YFVerticalyBtn.m in Sources */,
 				5A2C019A1D3A131B00501045 /* YFNavController.m in Sources */,
 				5A2C01A51D3A1E8E00501045 /* YFCategory.m in Sources */,
+				5A2061F41D6C7A6F003DDAD7 /* XMGAddTagViewController.m in Sources */,
 				5A2C01AC1D3A22D300501045 /* YFUserCell.m in Sources */,
 				5A0FED5E1D407F9B00E69253 /* UIImage+YFExtension.m in Sources */,
 				5A5291651D3F12E30030D82C /* YFVideoCell.m in Sources */,
 				5A2C01961D3A131B00501045 /* YFFriendController.m in Sources */,
 				5A61B5F91D3D2965009ABB91 /* YFEssenceViewController.m in Sources */,
+				5A2061FB1D6C7A6F003DDAD7 /* XMGTagButton.m in Sources */,
 				5A4BFC2D1D3DC714001BBA90 /* YFTopicsViewController.m in Sources */,
+				5A2061FA1D6C7A6F003DDAD7 /* XMGPlaceholderTextView.m in Sources */,
 				5A0FED5A1D406EF300E69253 /* YFRecommendCell.m in Sources */,
 				5A2C019D1D3A131B00501045 /* UIView+YFExension.m in Sources */,
 				5A0FED661D409BB100E69253 /* YFRecommendViewController.m in Sources */,
 				5A4BFC391D3E2A4C001BBA90 /* YFPictureCell.m in Sources */,
 				5A464A2B1D41C781004C31B4 /* YFCommentUser.m in Sources */,
 				5A4BFC301D3DE36F001BBA90 /* YFTopics.m in Sources */,
+				5A2061F61D6C7A6F003DDAD7 /* XMGPublishViewController.m in Sources */,
 				5A52916A1D3F1AB10030D82C /* YFVoiceCell.m in Sources */,
 				5A2C019B1D3A131B00501045 /* YFTabBar.m in Sources */,
+				5A2061DC1D6C1850003DDAD7 /* YFCommentCell.m in Sources */,
 				5A0FED7E1D40F18B00E69253 /* YFFootBtn.m in Sources */,
 				5A0FED691D40C8FF00E69253 /* YFPushGuideView.m in Sources */,
+				5A2061F51D6C7A6F003DDAD7 /* XMGPostWordViewController.m in Sources */,
+				5A2061FC1D6C7A6F003DDAD7 /* XMGTagTextField.m in Sources */,
 				5A4BFC3D1D3E2F0B001BBA90 /* YFConst.m in Sources */,
 				5A464A251D41BEBD004C31B4 /* YFComment.m in Sources */,
 				5AC936FB1D3C89C600F9237D /* YFLoginViewController.m in Sources */,
