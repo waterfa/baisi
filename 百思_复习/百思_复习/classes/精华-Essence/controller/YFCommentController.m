@@ -70,7 +70,7 @@
 -(void)setupTableView
 {
     
-    self.tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+//    self.tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
     
     
     YFTWordCell *cell = [YFTWordCell word];
@@ -157,7 +157,7 @@
         
         //最热评论
         self.top_cmt = [YFComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
-        NSLog(@"%ld",self.comments.count);
+        NSLog(@"%ld",(unsigned long)self.comments.count);
         
         self.page = 1;
         
@@ -190,8 +190,12 @@
     
     params[@"lastcid"] = cmt.ID;
     
+    self.params = params;
+    
     //发送请求
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        if(self.params != params) return ;
         
         //最新评论
         NSArray *newComments = [YFComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
@@ -287,5 +291,8 @@
         self.topic.top_cmt = self.save_topcmt;
         [self.topic setValue:@0 forKey:@"_cellHeight"];
     }
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    //取消所有网络请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
 }
 @end

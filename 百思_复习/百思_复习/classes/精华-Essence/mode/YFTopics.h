@@ -50,6 +50,8 @@
 @property(nonatomic,strong)NSArray *top_cmt;
 /** 视频url */
 @property(nonatomic,strong)NSString *videouri;
+/** voiceURl */
+@property(nonatomic,strong)NSString *voiceuri;
 
 /** 帖子的id */
 @property(nonatomic,strong)NSString *ID;
@@ -65,5 +67,7 @@
 @property(nonatomic,assign)BOOL BigPicture;
 /** 评论的高度 */
 @property(nonatomic,assign)CGFloat commentViewH;
+/** 音乐播放状态 */
+@property(nonatomic,assign)BOOL selected;
 
 @end

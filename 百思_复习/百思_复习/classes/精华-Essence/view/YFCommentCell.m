@@ -61,7 +61,7 @@
     
     if(comment.voiceuri.length){
         self.contentLabel.hidden = YES;
-        [self.voiceBtn setTitle:[NSString stringWithFormat:@"%ld",comment.voicetime] forState:UIControlStateNormal];
+        [self.voiceBtn setTitle:[NSString stringWithFormat:@"%ld",(long)comment.voicetime] forState:UIControlStateNormal];
     }else{
         self.voiceBtn.hidden = YES;
         self.contentLabel.hidden = NO;

@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @class YFTopics;
+@class YFTopicsViewController;
+
 @interface YFVoiceCell : UITableViewCell
 
 /** 模型 */
 @property(nonatomic,strong)YFTopics *topic;
+
+/** yfTopicController */
+@property(nonatomic,weak)YFTopicsViewController *topicVC;
 
 +(instancetype)voice;
 @end

@@ -14,6 +14,7 @@
 #import "YFTWordCell.h"
 #import "YFEssenceViewController.h"
 #import "YFCommentController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface YFTopicsViewController ()
 /** 存放模型的数组 */
@@ -21,9 +22,14 @@
 
 /** 上一次传递的页码 */
 @property(nonatomic,strong)NSString *maxtime;
+
+
 @end
 
 @implementation YFTopicsViewController
+
+
+
 -(NSMutableArray *)topics
 {
     if(!_topics)
@@ -125,6 +131,8 @@ static NSString *const YFTopicID = @"topic";
     cell.topic = topic;
     
     
+    
+    
     return cell;
 }
 
@@ -140,7 +148,9 @@ static NSString *const YFTopicID = @"topic";
     vc.topic = self.topics[indexPath.row];
 //    vc.cell = [tableView cellForRowAtIndexPath:indexPath];
     vc.hidesBottomBarWhenPushed = YES;
+//    vc.topVC = self;
     [self.navigationController pushViewController:vc animated:YES];
+//    [self addChildViewController:vc];
 }
 
 

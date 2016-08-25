@@ -10,7 +10,10 @@
 
 
 
+
 @interface YFTopicsViewController : UITableViewController
 /** 类型 */
 @property(nonatomic,assign)topicsType type;
+
+
 @end

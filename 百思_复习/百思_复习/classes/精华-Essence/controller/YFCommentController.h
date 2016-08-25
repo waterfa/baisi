@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @class YFTopics;
+@class YFTopicsViewController;
 @interface YFCommentController : UIViewController
 
 /** topics */
 @property(nonatomic,strong)YFTopics *topic;
 /** cell */
 //@property(nonatomic,strong)UITableViewCell *cell;
+/** vc */
+@property(nonatomic,weak)YFTopicsViewController *topVC;
 @end

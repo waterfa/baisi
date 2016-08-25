@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void  (^voiceBlock )(NSString *url,BOOL play);
+
 @interface YFEssenceViewController : UIViewController
 /** type */
 @property(nonatomic,strong)NSString *a;
+/** block */
+@property(nonatomic,copy)voiceBlock VBlock;
+
 @end

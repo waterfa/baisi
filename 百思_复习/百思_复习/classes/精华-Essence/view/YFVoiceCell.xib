@@ -32,6 +32,9 @@
                         <state key="normal" image="playButtonPlay" backgroundImage="playButton"/>
                         <state key="selected" image="playButtonPause"/>
                         <state key="highlighted" backgroundImage="playButtonClick"/>
+                        <connections>
+                            <action selector="voiceBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="inW-yR-Zj2"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -48,6 +51,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="mainImage" destination="Nsx-WT-69S" id="j4T-NS-r3p"/>
+                <outlet property="voiceBtn" destination="Vc9-gQ-esH" id="FiH-Ei-Wgc"/>
             </connections>
             <point key="canvasLocation" x="197.5" y="389"/>
         </tableViewCell>

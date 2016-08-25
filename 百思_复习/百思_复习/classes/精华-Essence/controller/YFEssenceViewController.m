@@ -9,6 +9,7 @@
 #import "YFEssenceViewController.h"
 #import "YFTopicsViewController.h"
 #import "YFRecommendViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 #define tableViewH YFScreenH - 64-35-44
 
@@ -22,9 +23,25 @@
 @property(nonatomic,strong)UIView *bottomView;
 /** scrollview */
 @property(nonatomic,strong)UIScrollView *scrollView;
+
+/** voice */
+@property(nonatomic,strong)AVPlayer *avPlayer;
+
+/** voiceurl */
+@property(nonatomic,strong)NSString *voiceurl;
 @end
 
 @implementation YFEssenceViewController
+-(AVPlayer *)avPlayer
+{
+    if(!_avPlayer)
+    {
+        AVPlayerItem *item = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:nil]];
+        _avPlayer = [AVPlayer playerWithPlayerItem:item];
+        
+    }
+    return _avPlayer;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,7 +53,23 @@
     [self addChildViewControllers];
     [self setupTitleView];
     
-    
+    __block typeof(self) weakSelf = self;
+    [self setVBlock:^(NSString *url ,BOOL play){
+        
+        
+        if(!play){
+            if(![weakSelf.voiceurl isEqualToString:url]){
+                AVPlayerItem *item = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:url]];
+                [weakSelf.avPlayer replaceCurrentItemWithPlayerItem:item];
+                weakSelf.voiceurl = url;
+                
+            }
+            [weakSelf.avPlayer play];
+        }else{
+            [weakSelf.avPlayer pause];
+        }
+        
+    }];
     
     
 }

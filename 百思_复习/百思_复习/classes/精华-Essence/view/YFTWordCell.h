@@ -13,5 +13,7 @@
 /** 模型 */
 @property(nonatomic,strong)YFTopics *topic;
 
+
+
 +(instancetype)word;
 @end
